@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policies</title>
+<style>
+  :root {
+    --bg: #fbfbfd;
+    --sidebar-bg: #f5f5f7;
+    --card-bg: #ffffff;
+    --border: #e5e5e7;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --accent: #0071e3;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto,
+      "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    min-height: 100vh;
+  }
+
+  /* ── Sidebar ── */
+  .sidebar {
+    background: var(--sidebar-bg);
+    border-right: 1px solid var(--border);
+    padding: 32px 20px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  .sidebar h1 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 0 0 18px 4px;
+  }
+  .sidebar nav a {
+    display: block;
+    padding: 9px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+  .sidebar nav a:hover { background: #eaeaec; text-decoration: none; }
+  .sidebar nav a.active { background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.06); font-weight: 600; }
+  .sidebar .updated {
+    margin-top: 28px;
+    padding: 4px;
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+
+  /* ── Content ── */
+  .content {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 64px 32px 120px;
+    width: 100%;
+  }
+  .content > header {
+    margin-bottom: 56px;
+  }
+  .content > header h1 {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 8px;
+  }
+  .content > header p {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .app-section {
+    margin-bottom: 72px;
+    scroll-margin-top: 32px;
+  }
+  .app-section h2 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 4px;
+  }
+  .app-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 100px;
+    background: #eef4ff;
+    color: var(--accent);
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .app-meta {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin: 4px 0 24px;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+  .prop-row {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 16px;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    line-height: 1.65;
+  }
+  .prop-row:last-child { border-bottom: none; }
+  .prop-label {
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 13px;
+    padding-top: 1px;
+  }
+  .prop-value ul { margin: 0; padding-left: 18px; }
+  .prop-value li { margin-bottom: 4px; }
+  .prop-value p { margin: 0; }
+  .prop-value code {
+    background: var(--sidebar-bg);
+    padding: 1px 6px;
+    border-radius: 5px;
+    font-size: 12.5px;
+  }
+
+  .note {
+    font-size: 13px;
+    color: var(--text-secondary);
+    background: var(--sidebar-bg);
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-top: 12px;
+    line-height: 1.6;
+  }
+
+  .template-flag {
+    font-size: 12px;
+    color: #b8860b;
+    background: #fff8e6;
+    border: 1px solid #f2e3b3;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 720px) {
+    .layout { grid-template-columns: 1fr; }
+    .sidebar {
+      position: static;
+      height: auto;
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+    .sidebar nav { display: flex; overflow-x: auto; gap: 4px; }
+    .sidebar nav a { white-space: nowrap; }
+    .content { padding: 40px 20px 100px; }
+    .prop-row { grid-template-columns: 1fr; gap: 4px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="layout">
+  <aside class="sidebar">
+    <h1>Privacy Policies</h1>
+    <nav id="nav">
+      <a href="#auto-clicker">Auto Clicker</a>
+      <a href="#app-a-example">[앱 이름 A] (AdMob 예시)</a>
+      <a href="#app-b-example">[앱 이름 B] (Firebase 예시)</a>
+    </nav>
+    <div class="updated">최종 수정일<br>2026년 7월</div>
+  </aside>
+
+  <main class="content">
+    <header>
+      <h1>개인정보 처리방침</h1>
+      <p>이 페이지는 제가 배포하는 모든 앱의 개인정보 처리방침을 한 곳에서 관리합니다. 왼쪽(모바일에서는 상단) 메뉴에서 해당 앱을 선택해 주세요.</p>
+    </header>
+
+    <!-- ══════════════ Auto Clicker (실제 서비스 중) ══════════════ -->
+    <section class="app-section" id="auto-clicker">
+      <h2>Auto Clicker <span class="app-badge">서비스 중</span></h2>
+      <p class="app-meta">회원가입 없음 · 광고 SDK 없음 · 인터넷 권한 없음 (완전 로컬 앱)</p>
+
+      <div class="card">
+        <div class="prop-row">
+          <div class="prop-label">수집하는 항목</div>
+          <div class="prop-value"><p>없음. 본 앱은 인터넷 접속 권한을 요청하지 않으며, 어떠한 개인정보도 수집하지 않습니다.</p></div>
+        </div>
+        <div class="prop-row">
+          <div class="prop-label">이용 목적</div>
+          <div class="prop-value"><p>해당 없음 (수집하는 정보가 없음). 사용자가 만든 스크립트(클릭 좌표, 반복 설정 등)는 기기 내부에만 저장되며 외부로 전송되지 않습니다.</p></div>
+        </div>
+        <div class="prop-row">
+          <div class="prop-label">보유 기간</div>
+          <div class="prop-value"><p>모든 데이터는 기기 로컬 저장소(SharedPreferences)에만 보관되며, 앱을 삭제하면 함께 삭제됩니다. 서버 보관 없음.</p></div>
+        </div>
+        <div class="prop-row">
+          <div class="prop-label">제3자 제공</div>
+          <div class="prop-value"><p>없음. 광고 SDK, 분석 도구를 포함하지 않으며 어떠한 정보도 제3자에게 제공·판매하지 않습니다.</p></div>
+        </div>
+        <div class="prop-row">
+          <div class="prop-label">접근성 서비스</div>
+          <div class="prop-value">
+            <p>손 사용이 불편하거나 반복 동작이 어려운 사용자를 위해, 사용자가 지정한 화면 좌표에 자동으로 탭·스와이프 동작을 수행하는 접근성 보조 기능입니다.</p>
+            <p style="margin-top:8px">화면에 표시된 다른 앱의 콘텐츠를 읽거나 수집하지 않으며, 오직 사용자가 사전에 설정한 제스처를 전달하는 데에만 사용됩니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="note">문의: <em>(연락 받을 이메일 주소를 입력하세요)</em></div>
+    </section>
+
+    <!-- ══════════════ 템플릿: AdMob 버전 앱 ══════════════ -->
+    <section class="app-section" id="app-a-example">
+      <h2>[앱 이름 A] <span class="app-badge">템플릿</span></h2>
+      <p class="app-meta">회원가입 없음 · Google AdMob 광고 SDK 포함</p>
+      <div class="template-flag">⚠️ 예시 뼈대입니다. 실제 앱 출시 전 앱 이름·SDK 버전·실제 수집 항목에 맞게 반드시 수정하세요.</div>
+
+      <div class="card">
+        <div class="prop-row">
+          <div class="prop-label">수집하는 항목</div>
+          <div class="prop-value">
+            <ul>
+              <li>광고 식별자 (Advertising ID)</li>
+              <li>기기 정보 (모델명, OS 버전, 언어 설정)</li>
+              <li>대략적 위치정보 (IP 기반 국가/지역 단위)</li>
+              <li>앱 사용 로그 (광고 노출·클릭 이벤트)</li>
+            </ul>
+            <p style="margin-top:8px">위 정보는 <code>Google AdMob SDK</code>가 자동으로 수집합니다.</p>
+          </div>
+        </div>
+        <div class="prop-row">
+          <div class="prop-label">이용 목적</div>
+          <div class="prop-value"><p>맞춤형 또는 일반 광고 게재, 광고 성과 측정 및 부정 클릭 방지</p></div>
+        </div>
+        <div class="prop-row">
+          <div class="prop-label">보유 기간</div>
+          <div class="prop-value"><p>Google의 개인정보처리방침에 따라 보관되며, 앱 자체는 별도로 데이터를 저장하지 않습니다.</p></div>
+        </div>
+        <div class="prop-row">
+          <div class="prop-label">제3자 제공</div>
+          <div class="prop-value">
+            <p>Google AdMob (Google LLC)에 광고 식별자 및 기기 정보가 제공됩니다.</p>
+            <p style="margin-top:8px">자세한 내용: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ 템플릿: Firebase Analytics 버전 앱 ══════════════ -->
+    <section class="app-section" id="app-b-example">
+      <h2>[앱 이름 B] <span class="app-badge">템플릿</span></h2>
+      <p class="app-meta">회원가입 없음 · Firebase Analytics 포함</p>
+      <div class="template-flag">⚠️ 예시 뼈대입니다. 실제 앱 출시 전 앱 이름·SDK 버전·실제 수집 항목에 맞게 반드시 수정하세요.</div>
+
+      <div class="card">
+        <div class="prop-row">
+          <div class="prop-label">수집하는 항목</div>
+          <div class="prop-value">
+            <ul>
+              <li>앱 사용 통계 (화면 조회, 이벤트 로그)</li>
+              <li>기기 식별자</li>
+              <li>대략적 위치정보 (국가/지역 단위)</li>
+              <li>충돌 로그 (Crashlytics 연동 시)</li>
+            </ul>
+            <p style="margin-top:8px">위 정보는 <code>Firebase Analytics SDK</code>가 자동으로 수집합니다.</p>
+          </div>
+        </div>
+        <div class="prop-row">
+          <div class="prop-label">이용 목적</div>
+          <div class="prop-value"><p>서비스 품질 개선, 사용 패턴 분석, 오류 진단 및 안정성 향상</p></div>
+        </div>
+        <div class="prop-row">
+          <div class="prop-label">보유 기간</div>
+          <div class="prop-value"><p>Firebase 기본 보관 정책에 따라 최대 14개월간 보관되며, 개발자가 설정을 통해 기간을 조정할 수 있습니다.</p></div>
+        </div>
+        <div class="prop-row">
+          <div class="prop-label">제3자 제공</div>
+          <div class="prop-value">
+            <p>Firebase (Google LLC)에 분석 데이터가 제공됩니다.</p>
+            <p style="margin-top:8px">자세한 내용: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 개인정보처리방침</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  // 스크롤 위치에 따라 현재 섹션 사이드바 하이라이트
+  const links = document.querySelectorAll('#nav a');
+  const sections = document.querySelectorAll('.app-section');
+  const setActive = () => {
+    let current = sections[0]?.id;
+    sections.forEach(sec => {
+      if (window.scrollY >= sec.offsetTop - 80) current = sec.id;
+    });
+    links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
+  };
+  window.addEventListener('scroll', setActive);
+  setActive();
+</script>
+
+</body>
+</html>
