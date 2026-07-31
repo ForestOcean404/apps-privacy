@@ -171,6 +171,20 @@
     margin-bottom: 20px;
   }
 
+  /* ── Focus mode (?app=xxx): 특정 앱 섹션만 보여줌 ── */
+  .back-link {
+    display: none;
+    font-size: 13px;
+    margin-bottom: 28px;
+  }
+  body.focus-mode .layout { grid-template-columns: 1fr; }
+  body.focus-mode .sidebar,
+  body.focus-mode .content > header { display: none; }
+  body.focus-mode .app-section { display: none; margin-bottom: 0; }
+  body.focus-mode .app-section.focused { display: block; }
+  body.focus-mode .content { padding-top: 48px; }
+  body.focus-mode .back-link { display: block; }
+
   @media (max-width: 720px) {
     .layout { grid-template-columns: 1fr; }
     .sidebar {
@@ -203,6 +217,7 @@
   </aside>
 
   <main class="content">
+    <a class="back-link" href="./">← 모든 앱 개인정보 처리방침 보기</a>
     <header>
       <h1>개인정보 처리방침</h1>
       <p>이 페이지는 제가 배포하는 모든 앱의 개인정보 처리방침을 한 곳에서 관리합니다. 왼쪽(모바일에서는 상단) 메뉴에서 해당 앱을 선택해 주세요.</p>
@@ -320,7 +335,19 @@
 </div>
 
 <script>
-  // 스크롤 위치에 따라 현재 섹션 사이드바 하이라이트
+  // ── Focus mode: ?app=auto-clicker 로 접속하면 해당 앱 섹션만 보여준다.
+  // 개별 앱(예: Auto Clicker)에서 개인정보처리방침 링크로 연결할 땐 이 모드를 사용해
+  // 다른 앱 목록이 함께 노출되지 않게 한다. 전체 목록은 파라미터 없이 접속하면 그대로 보인다.
+  const appId = new URLSearchParams(location.search).get('app');
+  if (appId) {
+    const target = document.getElementById(appId);
+    if (target) {
+      document.body.classList.add('focus-mode');
+      target.classList.add('focused');
+    }
+  }
+
+  // 스크롤 위치에 따라 현재 섹션 사이드바 하이라이트 (전체 목록 모드에서만 동작)
   const links = document.querySelectorAll('#nav a');
   const sections = document.querySelectorAll('.app-section');
   const setActive = () => {
@@ -330,8 +357,10 @@
     });
     links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
   };
-  window.addEventListener('scroll', setActive);
-  setActive();
+  if (!appId) {
+    window.addEventListener('scroll', setActive);
+    setActive();
+  }
 </script>
 
 </body>
