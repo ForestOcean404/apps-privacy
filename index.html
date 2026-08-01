@@ -242,24 +242,38 @@
     <!-- ══════════════ Auto Clicker (실제 서비스 중) ══════════════ -->
     <section class="app-section" id="auto-clicker">
       <h2>Auto Clicker <span class="app-badge" data-i18n="badge_active">서비스 중</span></h2>
-      <p class="app-meta" data-i18n="ac_meta">회원가입 없음 · 광고 SDK 없음 · 인터넷 권한 없음 (완전 로컬 앱)</p>
+      <p class="app-meta" data-i18n="ac_meta">회원가입 없음 · Google AdMob 광고 SDK 포함</p>
 
       <div class="card">
         <div class="prop-row">
           <div class="prop-label" data-i18n="label_collect">수집하는 항목</div>
-          <div class="prop-value" data-i18n="ac_collect"><p>없음. 본 앱은 인터넷 접속 권한을 요청하지 않으며, 어떠한 개인정보도 수집하지 않습니다.</p></div>
+          <div class="prop-value" data-i18n="ac_collect">
+            <p>본 앱이 자체적으로 수집하는 개인정보는 없습니다. 다만 광고 제공을 위해 <code>Google AdMob SDK</code>가 아래 정보를 자동으로 수집합니다.</p>
+            <ul style="margin-top:8px">
+              <li>광고 식별자 (Advertising ID)</li>
+              <li>기기 정보 (모델명, OS 버전, 언어 설정)</li>
+              <li>대략적 위치정보 (IP 기반 국가/지역 단위)</li>
+              <li>광고 노출·클릭 등 앱 사용 로그</li>
+            </ul>
+          </div>
         </div>
         <div class="prop-row">
           <div class="prop-label" data-i18n="label_purpose">이용 목적</div>
-          <div class="prop-value" data-i18n="ac_purpose"><p>해당 없음 (수집하는 정보가 없음). 사용자가 만든 스크립트(클릭 좌표, 반복 설정 등)는 기기 내부에만 저장되며 외부로 전송되지 않습니다.</p></div>
+          <div class="prop-value" data-i18n="ac_purpose">
+            <p>광고 SDK가 수집하는 정보는 맞춤형 또는 일반 광고 게재, 광고 성과 측정 및 부정 클릭 방지 목적으로 사용됩니다.</p>
+            <p style="margin-top:8px">사용자가 만든 스크립트(클릭 좌표, 반복 설정 등)는 광고와 무관하게 기기 내부에만 저장되며 외부로 전송되지 않습니다.</p>
+          </div>
         </div>
         <div class="prop-row">
           <div class="prop-label" data-i18n="label_retention">보유 기간</div>
-          <div class="prop-value" data-i18n="ac_retention"><p>모든 데이터는 기기 로컬 저장소(SharedPreferences)에만 보관되며, 앱을 삭제하면 함께 삭제됩니다. 서버 보관 없음.</p></div>
+          <div class="prop-value" data-i18n="ac_retention"><p>광고 식별자 등은 Google의 개인정보처리방침에 따라 보관되며, 앱 자체는 별도로 광고 데이터를 저장하지 않습니다. 사용자의 스크립트·설정은 기기 로컬 저장소(SharedPreferences)에만 보관되며, 앱을 삭제하면 함께 삭제됩니다.</p></div>
         </div>
         <div class="prop-row">
           <div class="prop-label" data-i18n="label_third_party">제3자 제공</div>
-          <div class="prop-value" data-i18n="ac_third_party"><p>없음. 광고 SDK, 분석 도구를 포함하지 않으며 어떠한 정보도 제3자에게 제공·판매하지 않습니다.</p></div>
+          <div class="prop-value" data-i18n="ac_third_party">
+            <p>Google AdMob (Google LLC)에 광고 식별자 및 기기 정보가 제공됩니다.</p>
+            <p style="margin-top:8px">자세한 내용: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a></p>
+          </div>
         </div>
         <div class="prop-row">
           <div class="prop-label" data-i18n="label_accessibility">접근성 서비스</div>
@@ -391,15 +405,15 @@
       header_title: "개인정보 처리방침",
       header_desc: "이 페이지는 제가 배포하는 모든 앱의 개인정보 처리방침을 한 곳에서 관리합니다. 왼쪽(모바일에서는 상단) 메뉴에서 해당 앱을 선택해 주세요.",
       badge_active: "서비스 중",
-      ac_meta: "회원가입 없음 · 광고 SDK 없음 · 인터넷 권한 없음 (완전 로컬 앱)",
+      ac_meta: "회원가입 없음 · Google AdMob 광고 SDK 포함",
       label_collect: "수집하는 항목",
-      ac_collect: "<p>없음. 본 앱은 인터넷 접속 권한을 요청하지 않으며, 어떠한 개인정보도 수집하지 않습니다.</p>",
+      ac_collect: "<p>본 앱이 자체적으로 수집하는 개인정보는 없습니다. 다만 광고 제공을 위해 <code>Google AdMob SDK</code>가 아래 정보를 자동으로 수집합니다.</p><ul style=\"margin-top:8px\"><li>광고 식별자 (Advertising ID)</li><li>기기 정보 (모델명, OS 버전, 언어 설정)</li><li>대략적 위치정보 (IP 기반 국가/지역 단위)</li><li>광고 노출·클릭 등 앱 사용 로그</li></ul>",
       label_purpose: "이용 목적",
-      ac_purpose: "<p>해당 없음 (수집하는 정보가 없음). 사용자가 만든 스크립트(클릭 좌표, 반복 설정 등)는 기기 내부에만 저장되며 외부로 전송되지 않습니다.</p>",
+      ac_purpose: "<p>광고 SDK가 수집하는 정보는 맞춤형 또는 일반 광고 게재, 광고 성과 측정 및 부정 클릭 방지 목적으로 사용됩니다.</p><p style=\"margin-top:8px\">사용자가 만든 스크립트(클릭 좌표, 반복 설정 등)는 광고와 무관하게 기기 내부에만 저장되며 외부로 전송되지 않습니다.</p>",
       label_retention: "보유 기간",
-      ac_retention: "<p>모든 데이터는 기기 로컬 저장소(SharedPreferences)에만 보관되며, 앱을 삭제하면 함께 삭제됩니다. 서버 보관 없음.</p>",
+      ac_retention: "<p>광고 식별자 등은 Google의 개인정보처리방침에 따라 보관되며, 앱 자체는 별도로 광고 데이터를 저장하지 않습니다. 사용자의 스크립트·설정은 기기 로컬 저장소(SharedPreferences)에만 보관되며, 앱을 삭제하면 함께 삭제됩니다.</p>",
       label_third_party: "제3자 제공",
-      ac_third_party: "<p>없음. 광고 SDK, 분석 도구를 포함하지 않으며 어떠한 정보도 제3자에게 제공·판매하지 않습니다.</p>",
+      ac_third_party: "<p>Google AdMob (Google LLC)에 광고 식별자 및 기기 정보가 제공됩니다.</p><p style=\"margin-top:8px\">자세한 내용: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Google 개인정보처리방침</a></p>",
       label_accessibility: "접근성 서비스",
       ac_accessibility: "<p>손 사용이 불편하거나 반복 동작이 어려운 사용자를 위해, 사용자가 지정한 화면 좌표에 자동으로 탭·스와이프 동작을 수행하는 접근성 보조 기능입니다.</p><p style=\"margin-top:8px\">화면에 표시된 다른 앱의 콘텐츠를 읽거나 수집하지 않으며, 오직 사용자가 사전에 설정한 제스처를 전달하는 데에만 사용됩니다.</p>",
       label_terms: "이용약관",
@@ -412,15 +426,15 @@
       header_title: "Privacy Policy",
       header_desc: "This page manages the privacy policies for all apps I publish in one place. Please select the app from the menu on the left (or top, on mobile).",
       badge_active: "Live",
-      ac_meta: "No sign-up · No ad SDK · No internet permission (fully local app)",
+      ac_meta: "No sign-up · Includes Google AdMob ad SDK",
       label_collect: "Data Collected",
-      ac_collect: "<p>None. This app does not request internet access and does not collect any personal information.</p>",
+      ac_collect: "<p>This app does not itself collect any personal information. However, to serve ads, the <code>Google AdMob SDK</code> automatically collects the following:</p><ul style=\"margin-top:8px\"><li>Advertising ID</li><li>Device info (model, OS version, language settings)</li><li>Approximate location (IP-based country/region)</li><li>App usage logs (ad impressions and clicks)</li></ul>",
       label_purpose: "Purpose of Use",
-      ac_purpose: "<p>Not applicable (no data is collected). Scripts you create (tap coordinates, repeat settings, etc.) are stored only on your device and never transmitted externally.</p>",
+      ac_purpose: "<p>Data collected by the ad SDK is used to serve personalized or general ads, measure ad performance, and prevent invalid clicks.</p><p style=\"margin-top:8px\">Scripts you create (tap coordinates, repeat settings, etc.) are unrelated to ads and are stored only on your device, never transmitted externally.</p>",
       label_retention: "Retention Period",
-      ac_retention: "<p>All data is stored only in local device storage (SharedPreferences) and is deleted when the app is uninstalled. No server-side storage.</p>",
+      ac_retention: "<p>Advertising IDs and related data are retained according to Google's Privacy Policy; the app itself does not separately store ad data. Your scripts and settings are stored only in local device storage (SharedPreferences) and are deleted when the app is uninstalled.</p>",
       label_third_party: "Third-Party Sharing",
-      ac_third_party: "<p>None. This app includes no ad SDKs or analytics tools, and does not provide or sell any information to third parties.</p>",
+      ac_third_party: "<p>Advertising ID and device information are shared with Google AdMob (Google LLC).</p><p style=\"margin-top:8px\">See: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Google Privacy Policy</a></p>",
       label_accessibility: "Accessibility Service",
       ac_accessibility: "<p>An assistive feature that automatically performs taps and swipes at screen positions you specify, for users who have difficulty with hand movement or repetitive actions.</p><p style=\"margin-top:8px\">It does not read or collect the on-screen content of other apps, and is used solely to dispatch the gestures you have pre-configured.</p>",
       label_terms: "Terms of Service",
@@ -433,15 +447,15 @@
       header_title: "プライバシーポリシー",
       header_desc: "このページでは、私が公開しているすべてのアプリのプライバシーポリシーを一箇所で管理しています。左側（モバイルでは上部）のメニューから該当のアプリを選択してください。",
       badge_active: "提供中",
-      ac_meta: "会員登録なし · 広告SDKなし · インターネット権限なし（完全ローカルアプリ）",
+      ac_meta: "会員登録なし · Google AdMob 広告SDKを含む",
       label_collect: "収集する項目",
-      ac_collect: "<p>なし。本アプリはインターネット接続権限を要求せず、いかなる個人情報も収集しません。</p>",
+      ac_collect: "<p>本アプリ自体が収集する個人情報はありません。ただし広告配信のため、<code>Google AdMob SDK</code>が以下の情報を自動的に収集します。</p><ul style=\"margin-top:8px\"><li>広告識別子（Advertising ID）</li><li>端末情報（機種名、OSバージョン、言語設定）</li><li>おおよその位置情報（IPベースの国・地域単位）</li><li>アプリ利用ログ（広告表示・クリックイベント）</li></ul>",
       label_purpose: "利用目的",
-      ac_purpose: "<p>該当なし（収集する情報がないため）。ユーザーが作成したスクリプト（タップ座標、繰り返し設定など）は端末内にのみ保存され、外部に送信されません。</p>",
+      ac_purpose: "<p>広告SDKが収集する情報は、パーソナライズ広告または一般広告の配信、広告効果の測定、不正クリックの防止を目的として使用されます。</p><p style=\"margin-top:8px\">ユーザーが作成したスクリプト（タップ座標、繰り返し設定など）は広告とは無関係に端末内にのみ保存され、外部に送信されません。</p>",
       label_retention: "保有期間",
-      ac_retention: "<p>すべてのデータは端末ローカルストレージ（SharedPreferences）にのみ保存され、アプリを削除すると同時に削除されます。サーバー保管はありません。</p>",
+      ac_retention: "<p>広告識別子等はGoogleのプライバシーポリシーに従って保管され、アプリ自体は広告データを別途保存しません。ユーザーのスクリプト・設定は端末ローカルストレージ（SharedPreferences）にのみ保存され、アプリを削除すると同時に削除されます。</p>",
       label_third_party: "第三者提供",
-      ac_third_party: "<p>なし。広告SDKや分析ツールは含まれておらず、いかなる情報も第三者に提供・販売しません。</p>",
+      ac_third_party: "<p>広告識別子および端末情報がGoogle AdMob（Google LLC）に提供されます。</p><p style=\"margin-top:8px\">詳細: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Googleプライバシーポリシー</a></p>",
       label_accessibility: "ユーザー補助サービス",
       ac_accessibility: "<p>手の動作が不自由な方や、繰り返し操作が難しい方のために、指定した画面位置を自動でタップ・スワイプするユーザー補助機能です。</p><p style=\"margin-top:8px\">画面に表示された他のアプリの内容を読み取ったり収集したりすることはなく、事前に設定されたジェスチャーを実行するためのみに使用されます。</p>",
       label_terms: "利用規約",
@@ -454,15 +468,15 @@
       header_title: "隐私政策",
       header_desc: "此页面集中管理我发布的所有应用的隐私政策。请从左侧（移动端为顶部）菜单中选择相应的应用。",
       badge_active: "服务中",
-      ac_meta: "无需注册 · 无广告SDK · 无网络权限（完全本地应用）",
+      ac_meta: "无需注册 · 包含 Google AdMob 广告SDK",
       label_collect: "收集的信息",
-      ac_collect: "<p>无。本应用不请求网络访问权限，也不收集任何个人信息。</p>",
+      ac_collect: "<p>本应用自身不收集任何个人信息。但为了展示广告，<code>Google AdMob SDK</code>会自动收集以下信息：</p><ul style=\"margin-top:8px\"><li>广告标识符（Advertising ID）</li><li>设备信息（型号、操作系统版本、语言设置）</li><li>大致位置信息（基于IP的国家/地区）</li><li>应用使用日志（广告展示与点击事件）</li></ul>",
       label_purpose: "使用目的",
-      ac_purpose: "<p>不适用（未收集任何信息）。用户创建的脚本（点击坐标、重复设置等）仅保存在设备内部，不会传输到外部。</p>",
+      ac_purpose: "<p>广告SDK收集的信息用于投放个性化或通用广告、衡量广告效果以及防止无效点击。</p><p style=\"margin-top:8px\">用户创建的脚本（点击坐标、重复设置等）与广告无关，仅保存在设备内部，不会传输到外部。</p>",
       label_retention: "保留期限",
-      ac_retention: "<p>所有数据仅保存在设备本地存储（SharedPreferences）中，卸载应用后即被删除。不存储于服务器。</p>",
+      ac_retention: "<p>广告标识符等信息将按照 Google 的隐私政策予以保留，应用本身不会单独存储广告数据。用户的脚本与设置仅保存在设备本地存储（SharedPreferences）中，卸载应用后即被删除。</p>",
       label_third_party: "第三方提供",
-      ac_third_party: "<p>无。不包含广告SDK或分析工具，不会向第三方提供或出售任何信息。</p>",
+      ac_third_party: "<p>广告标识符及设备信息将提供给 Google AdMob（Google LLC）。</p><p style=\"margin-top:8px\">详情请见：<a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Google 隐私政策</a></p>",
       label_accessibility: "无障碍服务",
       ac_accessibility: "<p>面向手部操作不便或难以完成重复动作的用户，可在指定的屏幕位置自动执行点击、滑动操作的辅助功能。</p><p style=\"margin-top:8px\">不会读取或收集屏幕上其他应用的内容，仅用于执行用户预先设置的手势。</p>",
       label_terms: "服务条款",
@@ -475,15 +489,15 @@
       header_title: "Política de Privacidad",
       header_desc: "Esta página administra en un solo lugar las políticas de privacidad de todas las apps que publico. Selecciona la app en el menú de la izquierda (o arriba, en móvil).",
       badge_active: "En servicio",
-      ac_meta: "Sin registro · Sin SDK de anuncios · Sin permiso de internet (app totalmente local)",
+      ac_meta: "Sin registro · Incluye el SDK de anuncios de Google AdMob",
       label_collect: "Datos recopilados",
-      ac_collect: "<p>Ninguno. Esta app no solicita acceso a internet y no recopila ninguna información personal.</p>",
+      ac_collect: "<p>Esta app no recopila ninguna información personal por sí misma. Sin embargo, para mostrar anuncios, el <code>SDK de Google AdMob</code> recopila automáticamente lo siguiente:</p><ul style=\"margin-top:8px\"><li>Identificador de publicidad (Advertising ID)</li><li>Información del dispositivo (modelo, versión del SO, idioma)</li><li>Ubicación aproximada (país/región según IP)</li><li>Registros de uso de la app (impresiones y clics de anuncios)</li></ul>",
       label_purpose: "Finalidad de uso",
-      ac_purpose: "<p>No aplica (no se recopila información). Los scripts que creas (coordenadas de toque, ajustes de repetición, etc.) se guardan solo en tu dispositivo y nunca se transmiten externamente.</p>",
+      ac_purpose: "<p>La información recopilada por el SDK de anuncios se usa para mostrar anuncios personalizados o generales, medir su rendimiento y prevenir clics fraudulentos.</p><p style=\"margin-top:8px\">Los scripts que creas (coordenadas de toque, ajustes de repetición, etc.) no están relacionados con los anuncios y se guardan solo en tu dispositivo, nunca se transmiten externamente.</p>",
       label_retention: "Período de retención",
-      ac_retention: "<p>Todos los datos se almacenan únicamente en el almacenamiento local del dispositivo (SharedPreferences) y se eliminan al desinstalar la app. Sin almacenamiento en servidor.</p>",
+      ac_retention: "<p>El identificador de publicidad y datos relacionados se conservan según la Política de Privacidad de Google; la app en sí no almacena datos de anuncios por separado. Tus scripts y ajustes se guardan solo en el almacenamiento local del dispositivo (SharedPreferences) y se eliminan al desinstalar la app.</p>",
       label_third_party: "Compartición con terceros",
-      ac_third_party: "<p>Ninguna. Esta app no incluye SDK de anuncios ni herramientas de análisis, y no proporciona ni vende información a terceros.</p>",
+      ac_third_party: "<p>El identificador de publicidad y la información del dispositivo se comparten con Google AdMob (Google LLC).</p><p style=\"margin-top:8px\">Más información: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Política de Privacidad de Google</a></p>",
       label_accessibility: "Servicio de accesibilidad",
       ac_accessibility: "<p>Una función de asistencia que realiza toques y deslizamientos automáticos en las posiciones de pantalla que especifiques, pensada para usuarios con dificultades motoras o de repetición.</p><p style=\"margin-top:8px\">No lee ni recopila el contenido en pantalla de otras apps, y se usa únicamente para ejecutar los gestos que hayas configurado previamente.</p>",
       label_terms: "Términos de Servicio",
@@ -496,15 +510,15 @@
       header_title: "سياسة الخصوصية",
       header_desc: "تدير هذه الصفحة سياسات الخصوصية لجميع التطبيقات التي أنشرها في مكان واحد. يُرجى اختيار التطبيق من القائمة الموجودة على اليسار (أو في الأعلى على الجوال).",
       badge_active: "قيد الخدمة",
-      ac_meta: "بدون تسجيل · بدون حزمة إعلانات · بدون إذن إنترنت (تطبيق محلي بالكامل)",
+      ac_meta: "بدون تسجيل · يتضمن حزمة إعلانات Google AdMob",
       label_collect: "البيانات التي يتم جمعها",
-      ac_collect: "<p>لا يوجد. لا يطلب هذا التطبيق إذن الوصول إلى الإنترنت ولا يجمع أي معلومات شخصية.</p>",
+      ac_collect: "<p>لا يجمع هذا التطبيق نفسه أي معلومات شخصية. لكن لعرض الإعلانات، يقوم <code>Google AdMob SDK</code> تلقائياً بجمع المعلومات التالية:</p><ul style=\"margin-top:8px\"><li>معرّف الإعلان (Advertising ID)</li><li>معلومات الجهاز (الطراز، إصدار النظام، إعدادات اللغة)</li><li>الموقع التقريبي (الدولة/المنطقة بناءً على IP)</li><li>سجلات استخدام التطبيق (مشاهدات ونقرات الإعلانات)</li></ul>",
       label_purpose: "الغرض من الاستخدام",
-      ac_purpose: "<p>لا ينطبق (لا يتم جمع أي بيانات). يتم حفظ النصوص البرمجية التي ينشئها المستخدم (إحداثيات النقر، إعدادات التكرار، إلخ) على الجهاز فقط ولا يتم إرسالها خارجياً.</p>",
+      ac_purpose: "<p>تُستخدم المعلومات التي تجمعها حزمة الإعلانات لعرض إعلانات مخصصة أو عامة، وقياس أداء الإعلانات، ومنع النقرات الاحتيالية.</p><p style=\"margin-top:8px\">النصوص البرمجية التي ينشئها المستخدم (إحداثيات النقر، إعدادات التكرار، إلخ) لا علاقة لها بالإعلانات وتُحفظ على الجهاز فقط ولا يتم إرسالها خارجياً.</p>",
       label_retention: "مدة الاحتفاظ بالبيانات",
-      ac_retention: "<p>يتم تخزين جميع البيانات محلياً على الجهاز فقط (SharedPreferences) ويتم حذفها عند إلغاء تثبيت التطبيق. لا يوجد تخزين على الخادم.</p>",
+      ac_retention: "<p>يتم الاحتفاظ بمعرّف الإعلان وما شابهه وفقاً لسياسة خصوصية Google، ولا يقوم التطبيق نفسه بتخزين بيانات الإعلانات بشكل منفصل. يتم حفظ النصوص البرمجية وإعدادات المستخدم محلياً على الجهاز فقط (SharedPreferences) ويتم حذفها عند إلغاء تثبيت التطبيق.</p>",
       label_third_party: "المشاركة مع أطراف ثالثة",
-      ac_third_party: "<p>لا يوجد. لا يتضمن هذا التطبيق أي حزمة إعلانات أو أدوات تحليل، ولا يقدم أو يبيع أي معلومات لأطراف ثالثة.</p>",
+      ac_third_party: "<p>يتم تزويد Google AdMob (Google LLC) بمعرّف الإعلان ومعلومات الجهاز.</p><p style=\"margin-top:8px\">لمزيد من التفاصيل: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">سياسة خصوصية Google</a></p>",
       label_accessibility: "خدمة إمكانية الوصول",
       ac_accessibility: "<p>ميزة مساعدة تقوم تلقائياً بالنقر والتمرير في المواضع التي تحددها على الشاشة، مخصصة للمستخدمين الذين يواجهون صعوبة في حركة اليد أو الإجراءات المتكررة.</p><p style=\"margin-top:8px\">لا تقرأ أو تجمع محتوى الشاشة الخاص بتطبيقات أخرى، وتُستخدم فقط لتنفيذ الإيماءات التي قمت بإعدادها مسبقاً.</p>",
       label_terms: "شروط الخدمة",
