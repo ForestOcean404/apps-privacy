@@ -67,6 +67,19 @@
     font-size: 12px;
     color: var(--text-secondary);
   }
+  .lang-switch {
+    margin-top: 16px;
+  }
+  .lang-switch select {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--text);
+    font-size: 13px;
+    font-family: inherit;
+  }
 
   /* ── Content ── */
   .content {
@@ -197,57 +210,67 @@
 
 <div class="layout">
   <aside class="sidebar">
-    <h1>Terms of Service</h1>
+    <h1 data-i18n="sidebar_title">Terms of Service</h1>
     <nav id="nav">
       <a href="#auto-clicker">Auto Clicker</a>
     </nav>
-    <div class="updated">최종 수정일<br>2026년 8월</div>
+    <div class="lang-switch">
+      <select id="langSelect">
+        <option value="ko">한국어</option>
+        <option value="en">English</option>
+        <option value="ja">日本語</option>
+        <option value="zh">中文</option>
+        <option value="es">Español</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
+    <div class="updated" data-i18n="updated_label">최종 수정일<br>2026년 8월</div>
   </aside>
 
   <main class="content">
-    <a class="back-link" href="./terms.html">← 모든 앱 이용약관 보기</a>
+    <a class="back-link" href="./terms.html" data-i18n="back_link">← 모든 앱 이용약관 보기</a>
     <header>
-      <h1>이용약관</h1>
-      <p>이 페이지는 제가 배포하는 앱들의 이용약관을 한 곳에서 관리합니다. 왼쪽(모바일에서는 상단) 메뉴에서 해당 앱을 선택해 주세요.</p>
+      <h1 data-i18n="header_title">이용약관</h1>
+      <p data-i18n="header_desc">이 페이지는 제가 배포하는 앱들의 이용약관을 한 곳에서 관리합니다. 왼쪽(모바일에서는 상단) 메뉴에서 해당 앱을 선택해 주세요.</p>
     </header>
 
     <!-- ══════════════ Auto Clicker ══════════════ -->
     <section class="app-section" id="auto-clicker">
-      <h2>Auto Clicker <span class="app-badge">서비스 중</span></h2>
-      <p class="app-meta">개발자: NatureTeam · 최종 수정일 2026년 8월</p>
+      <h2>Auto Clicker <span class="app-badge" data-i18n="badge_active">서비스 중</span></h2>
+      <p class="app-meta" data-i18n="ac_meta">개발자: NatureTeam · 최종 수정일 2026년 8월</p>
 
       <div class="card">
         <div class="prop-row">
-          <div class="prop-label">서비스 개요</div>
-          <div class="prop-value"><p>Auto Clicker(이하 "본 앱")는 사용자가 지정한 화면 좌표에 자동으로 탭·스와이프 동작을 수행하는 안드로이드 접근성 보조 도구입니다. 회원가입이나 로그인 없이 기기 내에서만 동작하며, 본 약관은 본 앱의 이용 조건을 정합니다.</p></div>
+          <div class="prop-label" data-i18n="label_overview">서비스 개요</div>
+          <div class="prop-value" data-i18n="ac_overview"><p>Auto Clicker(이하 "본 앱")는 사용자가 지정한 화면 좌표에 자동으로 탭·스와이프 동작을 수행하는 안드로이드 접근성 보조 도구입니다. 회원가입이나 로그인 없이 기기 내에서만 동작하며, 본 약관은 본 앱의 이용 조건을 정합니다.</p></div>
         </div>
         <div class="prop-row">
-          <div class="prop-label">이용 목적</div>
-          <div class="prop-value"><p>본 앱은 손 사용이 불편하거나 반복적인 탭·스와이프 동작이 어려운 사용자를 돕기 위한 접근성 보조 목적으로 제공됩니다. 사용자는 본 앱을 관련 법령 및 이용 중인 다른 서비스(예: 게임, 앱)의 이용약관을 위반하지 않는 범위에서 사용해야 하며, 그 사용 결과(예: 제3자 서비스의 계정 제재 등)에 대한 책임은 전적으로 사용자 본인에게 있습니다.</p></div>
+          <div class="prop-label" data-i18n="label_purpose">이용 목적</div>
+          <div class="prop-value" data-i18n="ac_purpose"><p>본 앱은 손 사용이 불편하거나 반복적인 탭·스와이프 동작이 어려운 사용자를 돕기 위한 접근성 보조 목적으로 제공됩니다. 사용자는 본 앱을 관련 법령 및 이용 중인 다른 서비스(예: 게임, 앱)의 이용약관을 위반하지 않는 범위에서 사용해야 하며, 그 사용 결과(예: 제3자 서비스의 계정 제재 등)에 대한 책임은 전적으로 사용자 본인에게 있습니다.</p></div>
         </div>
         <div class="prop-row">
-          <div class="prop-label">계정 및 데이터</div>
-          <div class="prop-value"><p>본 앱은 별도의 계정 시스템이 없습니다. 사용자가 만든 스크립트와 설정은 기기 로컬 저장소에만 보관되며, 개발자는 이에 접근하거나 수집하지 않습니다. 자세한 내용은 <a href="./?app=auto-clicker">개인정보 처리방침</a>을 참고해 주세요.</p></div>
+          <div class="prop-label" data-i18n="label_account">계정 및 데이터</div>
+          <div class="prop-value" data-i18n="ac_account"><p>본 앱은 별도의 계정 시스템이 없습니다. 사용자가 만든 스크립트와 설정은 기기 로컬 저장소에만 보관되며, 개발자는 이에 접근하거나 수집하지 않습니다. 자세한 내용은 <a href="./?app=auto-clicker">개인정보 처리방침</a>을 참고해 주세요.</p></div>
         </div>
         <div class="prop-row">
-          <div class="prop-label">면책 및 보증의 부인</div>
-          <div class="prop-value"><p>본 앱은 "있는 그대로(AS-IS)" 제공되며, 특정 목적에의 적합성이나 오류 없는 동작을 보증하지 않습니다. 사용자의 기기 설정, 접근성 권한 부여, 또는 본 앱의 사용으로 인해 발생하는 직·간접적 손해에 대해 개발자는 법이 허용하는 최대 범위에서 책임을 지지 않습니다.</p></div>
+          <div class="prop-label" data-i18n="label_disclaimer">면책 및 보증의 부인</div>
+          <div class="prop-value" data-i18n="ac_disclaimer"><p>본 앱은 "있는 그대로(AS-IS)" 제공되며, 특정 목적에의 적합성이나 오류 없는 동작을 보증하지 않습니다. 사용자의 기기 설정, 접근성 권한 부여, 또는 본 앱의 사용으로 인해 발생하는 직·간접적 손해에 대해 개발자는 법이 허용하는 최대 범위에서 책임을 지지 않습니다.</p></div>
         </div>
         <div class="prop-row">
-          <div class="prop-label">서비스 변경 및 중단</div>
-          <div class="prop-value"><p>개발자는 필요에 따라 본 앱의 기능을 변경하거나 서비스 제공을 중단할 수 있으며, 중요한 변경 사항은 앱 업데이트 또는 이 페이지를 통해 안내합니다.</p></div>
+          <div class="prop-label" data-i18n="label_changes">서비스 변경 및 중단</div>
+          <div class="prop-value" data-i18n="ac_changes"><p>개발자는 필요에 따라 본 앱의 기능을 변경하거나 서비스 제공을 중단할 수 있으며, 중요한 변경 사항은 앱 업데이트 또는 이 페이지를 통해 안내합니다.</p></div>
         </div>
         <div class="prop-row">
-          <div class="prop-label">약관 변경</div>
-          <div class="prop-value"><p>본 약관은 필요 시 개정될 수 있으며, 개정 시 이 페이지에 최종 수정일과 함께 갱신됩니다. 앱을 계속 사용하는 경우 개정된 약관에 동의한 것으로 간주됩니다.</p></div>
+          <div class="prop-label" data-i18n="label_terms_change">약관 변경</div>
+          <div class="prop-value" data-i18n="ac_terms_change"><p>본 약관은 필요 시 개정될 수 있으며, 개정 시 이 페이지에 최종 수정일과 함께 갱신됩니다. 앱을 계속 사용하는 경우 개정된 약관에 동의한 것으로 간주됩니다.</p></div>
         </div>
         <div class="prop-row">
-          <div class="prop-label">준거법</div>
-          <div class="prop-value"><p>본 약관은 대한민국 법률에 따라 해석됩니다.</p></div>
+          <div class="prop-label" data-i18n="label_law">준거법</div>
+          <div class="prop-value" data-i18n="ac_law"><p>본 약관은 대한민국 법률에 따라 해석됩니다.</p></div>
         </div>
       </div>
 
-      <div class="note">문의: <em>(연락 받을 이메일 주소를 입력하세요)</em></div>
+      <div class="note" data-i18n="ac_contact">문의: <em>(연락 받을 이메일 주소를 입력하세요)</em></div>
     </section>
 
   </main>
@@ -276,6 +299,178 @@
     window.addEventListener('scroll', setActive);
     setActive();
   }
+
+  // ── 다국어: Auto Clicker 앱 UI 언어(ko/en/ja/zh/es/ar)와 맞춰서 이 페이지도 같은 언어로 보여준다.
+  const translations = {
+    ko: {
+      sidebar_title: "Terms of Service",
+      updated_label: "최종 수정일<br>2026년 8월",
+      back_link: "← 모든 앱 이용약관 보기",
+      header_title: "이용약관",
+      header_desc: "이 페이지는 제가 배포하는 앱들의 이용약관을 한 곳에서 관리합니다. 왼쪽(모바일에서는 상단) 메뉴에서 해당 앱을 선택해 주세요.",
+      badge_active: "서비스 중",
+      ac_meta: "개발자: NatureTeam · 최종 수정일 2026년 8월",
+      label_overview: "서비스 개요",
+      ac_overview: "<p>Auto Clicker(이하 \"본 앱\")는 사용자가 지정한 화면 좌표에 자동으로 탭·스와이프 동작을 수행하는 안드로이드 접근성 보조 도구입니다. 회원가입이나 로그인 없이 기기 내에서만 동작하며, 본 약관은 본 앱의 이용 조건을 정합니다.</p>",
+      label_purpose: "이용 목적",
+      ac_purpose: "<p>본 앱은 손 사용이 불편하거나 반복적인 탭·스와이프 동작이 어려운 사용자를 돕기 위한 접근성 보조 목적으로 제공됩니다. 사용자는 본 앱을 관련 법령 및 이용 중인 다른 서비스(예: 게임, 앱)의 이용약관을 위반하지 않는 범위에서 사용해야 하며, 그 사용 결과(예: 제3자 서비스의 계정 제재 등)에 대한 책임은 전적으로 사용자 본인에게 있습니다.</p>",
+      label_account: "계정 및 데이터",
+      ac_account: "<p>본 앱은 별도의 계정 시스템이 없습니다. 사용자가 만든 스크립트와 설정은 기기 로컬 저장소에만 보관되며, 개발자는 이에 접근하거나 수집하지 않습니다. 자세한 내용은 <a href=\"./?app=auto-clicker\" id=\"privacyLink\">개인정보 처리방침</a>을 참고해 주세요.</p>",
+      label_disclaimer: "면책 및 보증의 부인",
+      ac_disclaimer: "<p>본 앱은 \"있는 그대로(AS-IS)\" 제공되며, 특정 목적에의 적합성이나 오류 없는 동작을 보증하지 않습니다. 사용자의 기기 설정, 접근성 권한 부여, 또는 본 앱의 사용으로 인해 발생하는 직·간접적 손해에 대해 개발자는 법이 허용하는 최대 범위에서 책임을 지지 않습니다.</p>",
+      label_changes: "서비스 변경 및 중단",
+      ac_changes: "<p>개발자는 필요에 따라 본 앱의 기능을 변경하거나 서비스 제공을 중단할 수 있으며, 중요한 변경 사항은 앱 업데이트 또는 이 페이지를 통해 안내합니다.</p>",
+      label_terms_change: "약관 변경",
+      ac_terms_change: "<p>본 약관은 필요 시 개정될 수 있으며, 개정 시 이 페이지에 최종 수정일과 함께 갱신됩니다. 앱을 계속 사용하는 경우 개정된 약관에 동의한 것으로 간주됩니다.</p>",
+      label_law: "준거법",
+      ac_law: "<p>본 약관은 대한민국 법률에 따라 해석됩니다.</p>",
+      ac_contact: "문의: <em>(연락 받을 이메일 주소를 입력하세요)</em>",
+    },
+    en: {
+      sidebar_title: "Terms of Service",
+      updated_label: "Last updated<br>August 2026",
+      back_link: "← View terms of service for all apps",
+      header_title: "Terms of Service",
+      header_desc: "This page manages the terms of service for the apps I publish in one place. Please select the app from the menu on the left (or top, on mobile).",
+      badge_active: "Live",
+      ac_meta: "Developer: NatureTeam · Last updated August 2026",
+      label_overview: "Service Overview",
+      ac_overview: "<p>Auto Clicker (\"the App\") is an Android accessibility assistive tool that automatically performs taps and swipes at screen positions you specify. It works entirely on-device with no sign-up or login, and these terms govern the conditions of use for the App.</p>",
+      label_purpose: "Purpose of Use",
+      ac_purpose: "<p>The App is provided as an accessibility aid for users who have difficulty with hand movement or repetitive tapping/swiping. You must use the App within the bounds of applicable law and the terms of service of any other service you use it with (e.g. games, other apps), and you are solely responsible for any consequences of that use (e.g. account penalties from third-party services).</p>",
+      label_account: "Account & Data",
+      ac_account: "<p>The App has no account system. Scripts and settings you create are stored only in local device storage, and the developer does not access or collect them. See the <a href=\"./?app=auto-clicker\" id=\"privacyLink\">Privacy Policy</a> for details.</p>",
+      label_disclaimer: "Disclaimer & Warranty",
+      ac_disclaimer: "<p>The App is provided \"AS-IS\" without any warranty of fitness for a particular purpose or error-free operation. To the maximum extent permitted by law, the developer is not liable for any direct or indirect damages arising from your device settings, granting of accessibility permissions, or use of the App.</p>",
+      label_changes: "Service Changes & Discontinuation",
+      ac_changes: "<p>The developer may modify the App's features or discontinue the service as needed. Significant changes will be announced through app updates or this page.</p>",
+      label_terms_change: "Changes to These Terms",
+      ac_terms_change: "<p>These terms may be revised as needed; any revision will be reflected on this page along with an updated date. Continued use of the App after a revision constitutes acceptance of the revised terms.</p>",
+      label_law: "Governing Law",
+      ac_law: "<p>These terms are governed by and construed in accordance with the laws of the Republic of Korea.</p>",
+      ac_contact: "Contact: <em>(enter the contact email address)</em>",
+    },
+    ja: {
+      sidebar_title: "Terms of Service",
+      updated_label: "最終更新日<br>2026年8月",
+      back_link: "← すべてのアプリの利用規約を見る",
+      header_title: "利用規約",
+      header_desc: "このページでは、私が公開しているアプリの利用規約を一箇所で管理しています。左側（モバイルでは上部）のメニューから該当のアプリを選択してください。",
+      badge_active: "提供中",
+      ac_meta: "開発者: NatureTeam · 最終更新日 2026年8月",
+      label_overview: "サービス概要",
+      ac_overview: "<p>Auto Clicker（以下「本アプリ」）は、指定した画面座標に自動でタップ・スワイプ動作を行うAndroid向けユーザー補助ツールです。会員登録やログインは不要で端末内のみで動作し、本規約は本アプリの利用条件を定めるものです。</p>",
+      label_purpose: "利用目的",
+      ac_purpose: "<p>本アプリは、手の動作が不自由な方や繰り返しのタップ・スワイプ動作が難しい方を支援するユーザー補助を目的として提供されます。ユーザーは関連法令および利用中の他サービス（ゲーム、アプリ等）の利用規約に違反しない範囲で本アプリを使用する必要があり、その使用結果（第三者サービスでのアカウント制裁等）について一切の責任はユーザー本人が負うものとします。</p>",
+      label_account: "アカウントとデータ",
+      ac_account: "<p>本アプリには別途のアカウントシステムはありません。ユーザーが作成したスクリプトや設定は端末のローカルストレージにのみ保存され、開発者がこれにアクセス・収集することはありません。詳細は<a href=\"./?app=auto-clicker\" id=\"privacyLink\">プライバシーポリシー</a>をご参照ください。</p>",
+      label_disclaimer: "免責事項および保証の否認",
+      ac_disclaimer: "<p>本アプリは「現状有姿（AS-IS）」で提供され、特定目的への適合性やエラーのない動作を保証するものではありません。ユーザーの端末設定、ユーザー補助権限の付与、または本アプリの使用により生じる直接的・間接的損害について、開発者は法律で認められる最大限の範囲で責任を負いません。</p>",
+      label_changes: "サービスの変更および中止",
+      ac_changes: "<p>開発者は必要に応じて本アプリの機能を変更、またはサービス提供を中止することができ、重要な変更事項はアプリのアップデートまたは本ページを通じてお知らせします。</p>",
+      label_terms_change: "規約の変更",
+      ac_terms_change: "<p>本規約は必要に応じて改定される場合があり、改定時には本ページに最終更新日とともに反映されます。改定後も本アプリの利用を継続した場合、改定後の規約に同意したものとみなされます。</p>",
+      label_law: "準拠法",
+      ac_law: "<p>本規約は大韓民国の法律に準拠して解釈されます。</p>",
+      ac_contact: "お問い合わせ: <em>(連絡先メールアドレスを入力してください)</em>",
+    },
+    zh: {
+      sidebar_title: "Terms of Service",
+      updated_label: "最后更新日期<br>2026年8月",
+      back_link: "← 查看所有应用的服务条款",
+      header_title: "服务条款",
+      header_desc: "此页面集中管理我发布的应用的服务条款。请从左侧（移动端为顶部）菜单中选择相应的应用。",
+      badge_active: "服务中",
+      ac_meta: "开发者: NatureTeam · 最后更新日期 2026年8月",
+      label_overview: "服务概述",
+      ac_overview: "<p>Auto Clicker（以下简称“本应用”）是一款安卓无障碍辅助工具，可在用户指定的屏幕坐标自动执行点击、滑动操作。本应用无需注册或登录，仅在设备内运行，本条款规定了本应用的使用条件。</p>",
+      label_purpose: "使用目的",
+      ac_purpose: "<p>本应用旨在为手部操作不便或难以完成重复点击、滑动操作的用户提供无障碍辅助。用户应在不违反相关法律法规及其正在使用的其他服务（如游戏、应用）服务条款的范围内使用本应用，因使用本应用而产生的后果（例如第三方服务的账号处罚等）由用户本人承担全部责任。</p>",
+      label_account: "账户与数据",
+      ac_account: "<p>本应用没有独立的账户系统。用户创建的脚本和设置仅保存在设备本地存储中，开发者不会访问或收集这些数据。详情请参阅<a href=\"./?app=auto-clicker\" id=\"privacyLink\">隐私政策</a>。</p>",
+      label_disclaimer: "免责声明及保证否认",
+      ac_disclaimer: "<p>本应用按“现状（AS-IS）”提供，不保证适用于特定目的或无错误运行。因用户的设备设置、授予无障碍权限或使用本应用而产生的直接或间接损害，开发者在法律允许的最大范围内不承担责任。</p>",
+      label_changes: "服务变更及终止",
+      ac_changes: "<p>开发者可根据需要变更本应用的功能或终止服务的提供，重大变更事项将通过应用更新或本页面进行通知。</p>",
+      label_terms_change: "条款变更",
+      ac_terms_change: "<p>本条款可能会根据需要进行修订，修订时将在本页面更新修订日期。修订后继续使用本应用即视为同意修订后的条款。</p>",
+      label_law: "适用法律",
+      ac_law: "<p>本条款依据大韩民国法律解释。</p>",
+      ac_contact: "联系方式: <em>(请输入联系邮箱地址)</em>",
+    },
+    es: {
+      sidebar_title: "Terms of Service",
+      updated_label: "Última actualización<br>Agosto de 2026",
+      back_link: "← Ver los términos de servicio de todas las apps",
+      header_title: "Términos de Servicio",
+      header_desc: "Esta página administra en un solo lugar los términos de servicio de las apps que publico. Selecciona la app en el menú de la izquierda (o arriba, en móvil).",
+      badge_active: "En servicio",
+      ac_meta: "Desarrollador: NatureTeam · Última actualización agosto de 2026",
+      label_overview: "Descripción del servicio",
+      ac_overview: "<p>Auto Clicker (\"la App\") es una herramienta de asistencia de accesibilidad para Android que realiza toques y deslizamientos automáticos en las posiciones de pantalla que especifiques. Funciona completamente en el dispositivo, sin registro ni inicio de sesión, y estos términos rigen las condiciones de uso de la App.</p>",
+      label_purpose: "Finalidad de uso",
+      ac_purpose: "<p>La App se ofrece como ayuda de accesibilidad para usuarios con dificultades motoras o de repetición al tocar/deslizar. Debes usar la App dentro de los límites de la ley aplicable y de los términos de servicio de cualquier otro servicio con el que la utilices (por ejemplo, juegos u otras apps), y eres el único responsable de las consecuencias de dicho uso (por ejemplo, sanciones de cuenta en servicios de terceros).</p>",
+      label_account: "Cuenta y datos",
+      ac_account: "<p>La App no tiene sistema de cuentas. Los scripts y ajustes que crees se guardan solo en el almacenamiento local del dispositivo, y el desarrollador no accede a ellos ni los recopila. Consulta la <a href=\"./?app=auto-clicker\" id=\"privacyLink\">Política de Privacidad</a> para más detalles.</p>",
+      label_disclaimer: "Exención de responsabilidad y garantía",
+      ac_disclaimer: "<p>La App se ofrece \"TAL CUAL\" sin garantía de idoneidad para un propósito particular ni de funcionamiento libre de errores. En la máxima medida permitida por la ley, el desarrollador no se hace responsable de los daños directos o indirectos derivados de la configuración de tu dispositivo, la concesión de permisos de accesibilidad o el uso de la App.</p>",
+      label_changes: "Cambios y discontinuación del servicio",
+      ac_changes: "<p>El desarrollador puede modificar las funciones de la App o discontinuar el servicio según sea necesario. Los cambios importantes se anunciarán mediante actualizaciones de la app o en esta página.</p>",
+      label_terms_change: "Cambios en estos términos",
+      ac_terms_change: "<p>Estos términos pueden revisarse según sea necesario; cualquier revisión se reflejará en esta página junto con la fecha de actualización. El uso continuado de la App tras una revisión constituye la aceptación de los términos revisados.</p>",
+      label_law: "Ley aplicable",
+      ac_law: "<p>Estos términos se rigen e interpretan de acuerdo con las leyes de la República de Corea.</p>",
+      ac_contact: "Contacto: <em>(introduce la dirección de correo de contacto)</em>",
+    },
+    ar: {
+      sidebar_title: "Terms of Service",
+      updated_label: "آخر تحديث<br>أغسطس 2026",
+      back_link: "← عرض شروط الخدمة لجميع التطبيقات",
+      header_title: "شروط الخدمة",
+      header_desc: "تدير هذه الصفحة شروط الخدمة للتطبيقات التي أنشرها في مكان واحد. يُرجى اختيار التطبيق من القائمة الموجودة على اليسار (أو في الأعلى على الجوال).",
+      badge_active: "قيد الخدمة",
+      ac_meta: "المطوّر: NatureTeam · آخر تحديث أغسطس 2026",
+      label_overview: "نظرة عامة على الخدمة",
+      ac_overview: "<p>يُعد Auto Clicker (\"التطبيق\") أداة مساعدة لإمكانية الوصول على أندرويد تقوم تلقائياً بالنقر والتمرير في المواضع التي تحددها على الشاشة. يعمل بالكامل على الجهاز دون الحاجة إلى تسجيل أو تسجيل دخول، وتحكم هذه الشروط استخدام التطبيق.</p>",
+      label_purpose: "الغرض من الاستخدام",
+      ac_purpose: "<p>يُقدَّم التطبيق كأداة مساعدة لإمكانية الوصول للمستخدمين الذين يواجهون صعوبة في حركة اليد أو النقر/التمرير المتكرر. يجب عليك استخدام التطبيق ضمن حدود القانون المعمول به وشروط خدمة أي خدمة أخرى تستخدمه معها (مثل الألعاب أو التطبيقات الأخرى)، وأنت المسؤول الوحيد عن أي عواقب لذلك الاستخدام (مثل عقوبات الحساب من خدمات الطرف الثالث).</p>",
+      label_account: "الحساب والبيانات",
+      ac_account: "<p>لا يحتوي التطبيق على نظام حسابات. يتم تخزين النصوص البرمجية والإعدادات التي تنشئها فقط في التخزين المحلي للجهاز، ولا يقوم المطوّر بالوصول إليها أو جمعها. راجع <a href=\"./?app=auto-clicker\" id=\"privacyLink\">سياسة الخصوصية</a> لمزيد من التفاصيل.</p>",
+      label_disclaimer: "إخلاء المسؤولية والضمان",
+      ac_disclaimer: "<p>يُقدَّم التطبيق \"كما هو\" دون أي ضمان للملاءمة لغرض معين أو للعمل الخالي من الأخطاء. وإلى أقصى حد يسمح به القانون، لا يتحمل المطوّر مسؤولية أي أضرار مباشرة أو غير مباشرة ناتجة عن إعدادات جهازك، أو منح أذونات إمكانية الوصول، أو استخدام التطبيق.</p>",
+      label_changes: "تغييرات الخدمة وإيقافها",
+      ac_changes: "<p>يجوز للمطوّر تعديل ميزات التطبيق أو إيقاف تقديم الخدمة حسب الحاجة، وسيتم الإعلان عن أي تغييرات مهمة من خلال تحديثات التطبيق أو هذه الصفحة.</p>",
+      label_terms_change: "تغييرات على هذه الشروط",
+      ac_terms_change: "<p>قد يتم تعديل هذه الشروط حسب الحاجة؛ وسيتم عكس أي تعديل على هذه الصفحة مع تاريخ التحديث. يُعد استمرار استخدام التطبيق بعد أي تعديل بمثابة قبول للشروط المعدّلة.</p>",
+      label_law: "القانون الحاكم",
+      ac_law: "<p>تخضع هذه الشروط وتُفسَّر وفقاً لقوانين جمهورية كوريا.</p>",
+      ac_contact: "للتواصل: <em>(أدخل عنوان البريد الإلكتروني للتواصل)</em>",
+    },
+  };
+
+  function applyLang(lang) {
+    const dict = translations[lang] || translations.ko;
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const t = dict[el.getAttribute('data-i18n')];
+      if (t !== undefined) el.innerHTML = t;
+    });
+    const privacyLink = document.getElementById('privacyLink');
+    if (privacyLink) privacyLink.href = `./?app=auto-clicker&lang=${lang}`;
+    document.getElementById('langSelect').value = lang;
+    try { localStorage.setItem('policyLang', lang); } catch (e) {}
+  }
+
+  const urlLang = new URLSearchParams(location.search).get('lang');
+  let storedLang = null;
+  try { storedLang = localStorage.getItem('policyLang'); } catch (e) {}
+  const initialLang = translations[urlLang] ? urlLang : (translations[storedLang] ? storedLang : 'ko');
+  applyLang(initialLang);
+
+  document.getElementById('langSelect').addEventListener('change', (e) => {
+    applyLang(e.target.value);
+  });
 </script>
 
 </body>
