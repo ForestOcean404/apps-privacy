@@ -185,18 +185,12 @@
   }
 
   /* ── Focus mode (?app=xxx): 특정 앱 섹션만 보여줌 ── */
-  .back-link {
-    display: none;
-    font-size: 13px;
-    margin-bottom: 28px;
-  }
   body.focus-mode .layout { grid-template-columns: 1fr; }
   body.focus-mode .sidebar,
   body.focus-mode .content > header { display: none; }
   body.focus-mode .app-section { display: none; margin-bottom: 0; }
   body.focus-mode .app-section.focused { display: block; }
   body.focus-mode .content { padding-top: 48px; }
-  body.focus-mode .back-link { display: block; }
 
   @media (max-width: 720px) {
     .layout { grid-template-columns: 1fr; }
@@ -240,7 +234,6 @@
   </aside>
 
   <main class="content">
-    <a class="back-link" href="./" data-i18n="back_link">← 모든 앱 개인정보 처리방침 보기</a>
     <header>
       <h1 data-i18n="header_title">개인정보 처리방침</h1>
       <p data-i18n="header_desc">이 페이지는 제가 배포하는 모든 앱의 개인정보 처리방침을 한 곳에서 관리합니다. 왼쪽(모바일에서는 상단) 메뉴에서 해당 앱을 선택해 주세요.</p>
@@ -277,7 +270,7 @@
         </div>
       </div>
 
-      <div class="note" data-i18n="ac_contact">문의: <em>(연락 받을 이메일 주소를 입력하세요)</em></div>
+      <div class="note" data-i18n="ac_contact">문의: <em>theforestocean@gmail.com</em></div>
     </section>
 
     <!-- ══════════════ 템플릿: AdMob 버전 앱 ══════════════ -->
@@ -391,7 +384,6 @@
     ko: {
       sidebar_title: "Privacy Policies",
       updated_label: "최종 수정일<br>2026년 7월",
-      back_link: "← 모든 앱 개인정보 처리방침 보기",
       header_title: "개인정보 처리방침",
       header_desc: "이 페이지는 제가 배포하는 모든 앱의 개인정보 처리방침을 한 곳에서 관리합니다. 왼쪽(모바일에서는 상단) 메뉴에서 해당 앱을 선택해 주세요.",
       badge_active: "서비스 중",
@@ -406,12 +398,11 @@
       ac_third_party: "<p>없음. 광고 SDK, 분석 도구를 포함하지 않으며 어떠한 정보도 제3자에게 제공·판매하지 않습니다.</p>",
       label_accessibility: "접근성 서비스",
       ac_accessibility: "<p>손 사용이 불편하거나 반복 동작이 어려운 사용자를 위해, 사용자가 지정한 화면 좌표에 자동으로 탭·스와이프 동작을 수행하는 접근성 보조 기능입니다.</p><p style=\"margin-top:8px\">화면에 표시된 다른 앱의 콘텐츠를 읽거나 수집하지 않으며, 오직 사용자가 사전에 설정한 제스처를 전달하는 데에만 사용됩니다.</p>",
-      ac_contact: "문의: <em>(연락 받을 이메일 주소를 입력하세요)</em>",
+      ac_contact: "문의: <em>theforestocean@gmail.com</em>",
     },
     en: {
       sidebar_title: "Privacy Policies",
       updated_label: "Last updated<br>July 2026",
-      back_link: "← View privacy policies for all apps",
       header_title: "Privacy Policy",
       header_desc: "This page manages the privacy policies for all apps I publish in one place. Please select the app from the menu on the left (or top, on mobile).",
       badge_active: "Live",
@@ -426,12 +417,11 @@
       ac_third_party: "<p>None. This app includes no ad SDKs or analytics tools, and does not provide or sell any information to third parties.</p>",
       label_accessibility: "Accessibility Service",
       ac_accessibility: "<p>An assistive feature that automatically performs taps and swipes at screen positions you specify, for users who have difficulty with hand movement or repetitive actions.</p><p style=\"margin-top:8px\">It does not read or collect the on-screen content of other apps, and is used solely to dispatch the gestures you have pre-configured.</p>",
-      ac_contact: "Contact: <em>(enter the contact email address)</em>",
+      ac_contact: "Contact: <em>theforestocean@gmail.com</em>",
     },
     ja: {
       sidebar_title: "Privacy Policies",
       updated_label: "最終更新日<br>2026年7月",
-      back_link: "← すべてのアプリのプライバシーポリシーを見る",
       header_title: "プライバシーポリシー",
       header_desc: "このページでは、私が公開しているすべてのアプリのプライバシーポリシーを一箇所で管理しています。左側（モバイルでは上部）のメニューから該当のアプリを選択してください。",
       badge_active: "提供中",
@@ -446,12 +436,11 @@
       ac_third_party: "<p>なし。広告SDKや分析ツールは含まれておらず、いかなる情報も第三者に提供・販売しません。</p>",
       label_accessibility: "ユーザー補助サービス",
       ac_accessibility: "<p>手の動作が不自由な方や、繰り返し操作が難しい方のために、指定した画面位置を自動でタップ・スワイプするユーザー補助機能です。</p><p style=\"margin-top:8px\">画面に表示された他のアプリの内容を読み取ったり収集したりすることはなく、事前に設定されたジェスチャーを実行するためのみに使用されます。</p>",
-      ac_contact: "お問い合わせ: <em>(連絡先メールアドレスを入力してください)</em>",
+      ac_contact: "お問い合わせ: <em>theforestocean@gmail.com</em>",
     },
     zh: {
       sidebar_title: "Privacy Policies",
       updated_label: "最后更新日期<br>2026年7月",
-      back_link: "← 查看所有应用的隐私政策",
       header_title: "隐私政策",
       header_desc: "此页面集中管理我发布的所有应用的隐私政策。请从左侧（移动端为顶部）菜单中选择相应的应用。",
       badge_active: "服务中",
@@ -466,12 +455,11 @@
       ac_third_party: "<p>无。不包含广告SDK或分析工具，不会向第三方提供或出售任何信息。</p>",
       label_accessibility: "无障碍服务",
       ac_accessibility: "<p>面向手部操作不便或难以完成重复动作的用户，可在指定的屏幕位置自动执行点击、滑动操作的辅助功能。</p><p style=\"margin-top:8px\">不会读取或收集屏幕上其他应用的内容，仅用于执行用户预先设置的手势。</p>",
-      ac_contact: "联系方式: <em>(请输入联系邮箱地址)</em>",
+      ac_contact: "联系方式: <em>theforestocean@gmail.com</em>",
     },
     es: {
       sidebar_title: "Privacy Policies",
       updated_label: "Última actualización<br>Julio de 2026",
-      back_link: "← Ver las políticas de privacidad de todas las apps",
       header_title: "Política de Privacidad",
       header_desc: "Esta página administra en un solo lugar las políticas de privacidad de todas las apps que publico. Selecciona la app en el menú de la izquierda (o arriba, en móvil).",
       badge_active: "En servicio",
@@ -486,12 +474,11 @@
       ac_third_party: "<p>Ninguna. Esta app no incluye SDK de anuncios ni herramientas de análisis, y no proporciona ni vende información a terceros.</p>",
       label_accessibility: "Servicio de accesibilidad",
       ac_accessibility: "<p>Una función de asistencia que realiza toques y deslizamientos automáticos en las posiciones de pantalla que especifiques, pensada para usuarios con dificultades motoras o de repetición.</p><p style=\"margin-top:8px\">No lee ni recopila el contenido en pantalla de otras apps, y se usa únicamente para ejecutar los gestos que hayas configurado previamente.</p>",
-      ac_contact: "Contacto: <em>(introduce la dirección de correo de contacto)</em>",
+      ac_contact: "Contacto: <em>theforestocean@gmail.com</em>",
     },
     ar: {
       sidebar_title: "Privacy Policies",
       updated_label: "آخر تحديث<br>يوليو 2026",
-      back_link: "← عرض سياسات الخصوصية لجميع التطبيقات",
       header_title: "سياسة الخصوصية",
       header_desc: "تدير هذه الصفحة سياسات الخصوصية لجميع التطبيقات التي أنشرها في مكان واحد. يُرجى اختيار التطبيق من القائمة الموجودة على اليسار (أو في الأعلى على الجوال).",
       badge_active: "قيد الخدمة",
@@ -506,7 +493,7 @@
       ac_third_party: "<p>لا يوجد. لا يتضمن هذا التطبيق أي حزمة إعلانات أو أدوات تحليل، ولا يقدم أو يبيع أي معلومات لأطراف ثالثة.</p>",
       label_accessibility: "خدمة إمكانية الوصول",
       ac_accessibility: "<p>ميزة مساعدة تقوم تلقائياً بالنقر والتمرير في المواضع التي تحددها على الشاشة، مخصصة للمستخدمين الذين يواجهون صعوبة في حركة اليد أو الإجراءات المتكررة.</p><p style=\"margin-top:8px\">لا تقرأ أو تجمع محتوى الشاشة الخاص بتطبيقات أخرى، وتُستخدم فقط لتنفيذ الإيماءات التي قمت بإعدادها مسبقاً.</p>",
-      ac_contact: "للتواصل: <em>(أدخل عنوان البريد الإلكتروني للتواصل)</em>",
+      ac_contact: "للتواصل: <em>theforestocean@gmail.com</em>",
     },
   };
 

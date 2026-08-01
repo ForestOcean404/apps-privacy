@@ -175,18 +175,12 @@
   }
 
   /* ── Focus mode (?app=xxx): 특정 앱 섹션만 보여줌 ── */
-  .back-link {
-    display: none;
-    font-size: 13px;
-    margin-bottom: 28px;
-  }
   body.focus-mode .layout { grid-template-columns: 1fr; }
   body.focus-mode .sidebar,
   body.focus-mode .content > header { display: none; }
   body.focus-mode .app-section { display: none; margin-bottom: 0; }
   body.focus-mode .app-section.focused { display: block; }
   body.focus-mode .content { padding-top: 48px; }
-  body.focus-mode .back-link { display: block; }
 
   @media (max-width: 720px) {
     .layout { grid-template-columns: 1fr; }
@@ -228,7 +222,6 @@
   </aside>
 
   <main class="content">
-    <a class="back-link" href="./terms.html" data-i18n="back_link">← 모든 앱 이용약관 보기</a>
     <header>
       <h1 data-i18n="header_title">이용약관</h1>
       <p data-i18n="header_desc">이 페이지는 제가 배포하는 앱들의 이용약관을 한 곳에서 관리합니다. 왼쪽(모바일에서는 상단) 메뉴에서 해당 앱을 선택해 주세요.</p>
@@ -237,7 +230,7 @@
     <!-- ══════════════ Auto Clicker ══════════════ -->
     <section class="app-section" id="auto-clicker">
       <h2>Auto Clicker <span class="app-badge" data-i18n="badge_active">서비스 중</span></h2>
-      <p class="app-meta" data-i18n="ac_meta">개발자: NatureTeam · 최종 수정일 2026년 8월</p>
+      <p class="app-meta" data-i18n="ac_meta">개발자: theForestOcean Team · 최종 수정일 2026년 8월</p>
 
       <div class="card">
         <div class="prop-row">
@@ -270,7 +263,7 @@
         </div>
       </div>
 
-      <div class="note" data-i18n="ac_contact">문의: <em>(연락 받을 이메일 주소를 입력하세요)</em></div>
+      <div class="note" data-i18n="ac_contact">문의: <em>theforestocean@gmail.com</em></div>
     </section>
 
   </main>
@@ -305,11 +298,10 @@
     ko: {
       sidebar_title: "Terms of Service",
       updated_label: "최종 수정일<br>2026년 8월",
-      back_link: "← 모든 앱 이용약관 보기",
       header_title: "이용약관",
       header_desc: "이 페이지는 제가 배포하는 앱들의 이용약관을 한 곳에서 관리합니다. 왼쪽(모바일에서는 상단) 메뉴에서 해당 앱을 선택해 주세요.",
       badge_active: "서비스 중",
-      ac_meta: "개발자: NatureTeam · 최종 수정일 2026년 8월",
+      ac_meta: "개발자: theForestOcean Team · 최종 수정일 2026년 8월",
       label_overview: "서비스 개요",
       ac_overview: "<p>Auto Clicker(이하 \"본 앱\")는 사용자가 지정한 화면 좌표에 자동으로 탭·스와이프 동작을 수행하는 안드로이드 접근성 보조 도구입니다. 회원가입이나 로그인 없이 기기 내에서만 동작하며, 본 약관은 본 앱의 이용 조건을 정합니다.</p>",
       label_purpose: "이용 목적",
@@ -324,16 +316,15 @@
       ac_terms_change: "<p>본 약관은 필요 시 개정될 수 있으며, 개정 시 이 페이지에 최종 수정일과 함께 갱신됩니다. 앱을 계속 사용하는 경우 개정된 약관에 동의한 것으로 간주됩니다.</p>",
       label_law: "준거법",
       ac_law: "<p>본 약관은 대한민국 법률에 따라 해석됩니다.</p>",
-      ac_contact: "문의: <em>(연락 받을 이메일 주소를 입력하세요)</em>",
+      ac_contact: "문의: <em>theforestocean@gmail.com</em>",
     },
     en: {
       sidebar_title: "Terms of Service",
       updated_label: "Last updated<br>August 2026",
-      back_link: "← View terms of service for all apps",
       header_title: "Terms of Service",
       header_desc: "This page manages the terms of service for the apps I publish in one place. Please select the app from the menu on the left (or top, on mobile).",
       badge_active: "Live",
-      ac_meta: "Developer: NatureTeam · Last updated August 2026",
+      ac_meta: "Developer: theForestOcean Team · Last updated August 2026",
       label_overview: "Service Overview",
       ac_overview: "<p>Auto Clicker (\"the App\") is an Android accessibility assistive tool that automatically performs taps and swipes at screen positions you specify. It works entirely on-device with no sign-up or login, and these terms govern the conditions of use for the App.</p>",
       label_purpose: "Purpose of Use",
@@ -348,16 +339,15 @@
       ac_terms_change: "<p>These terms may be revised as needed; any revision will be reflected on this page along with an updated date. Continued use of the App after a revision constitutes acceptance of the revised terms.</p>",
       label_law: "Governing Law",
       ac_law: "<p>These terms are governed by and construed in accordance with the laws of the Republic of Korea.</p>",
-      ac_contact: "Contact: <em>(enter the contact email address)</em>",
+      ac_contact: "Contact: <em>theforestocean@gmail.com</em>",
     },
     ja: {
       sidebar_title: "Terms of Service",
       updated_label: "最終更新日<br>2026年8月",
-      back_link: "← すべてのアプリの利用規約を見る",
       header_title: "利用規約",
       header_desc: "このページでは、私が公開しているアプリの利用規約を一箇所で管理しています。左側（モバイルでは上部）のメニューから該当のアプリを選択してください。",
       badge_active: "提供中",
-      ac_meta: "開発者: NatureTeam · 最終更新日 2026年8月",
+      ac_meta: "開発者: theForestOcean Team · 最終更新日 2026年8月",
       label_overview: "サービス概要",
       ac_overview: "<p>Auto Clicker（以下「本アプリ」）は、指定した画面座標に自動でタップ・スワイプ動作を行うAndroid向けユーザー補助ツールです。会員登録やログインは不要で端末内のみで動作し、本規約は本アプリの利用条件を定めるものです。</p>",
       label_purpose: "利用目的",
@@ -372,16 +362,15 @@
       ac_terms_change: "<p>本規約は必要に応じて改定される場合があり、改定時には本ページに最終更新日とともに反映されます。改定後も本アプリの利用を継続した場合、改定後の規約に同意したものとみなされます。</p>",
       label_law: "準拠法",
       ac_law: "<p>本規約は大韓民国の法律に準拠して解釈されます。</p>",
-      ac_contact: "お問い合わせ: <em>(連絡先メールアドレスを入力してください)</em>",
+      ac_contact: "お問い合わせ: <em>theforestocean@gmail.com</em>",
     },
     zh: {
       sidebar_title: "Terms of Service",
       updated_label: "最后更新日期<br>2026年8月",
-      back_link: "← 查看所有应用的服务条款",
       header_title: "服务条款",
       header_desc: "此页面集中管理我发布的应用的服务条款。请从左侧（移动端为顶部）菜单中选择相应的应用。",
       badge_active: "服务中",
-      ac_meta: "开发者: NatureTeam · 最后更新日期 2026年8月",
+      ac_meta: "开发者: theForestOcean Team · 最后更新日期 2026年8月",
       label_overview: "服务概述",
       ac_overview: "<p>Auto Clicker（以下简称“本应用”）是一款安卓无障碍辅助工具，可在用户指定的屏幕坐标自动执行点击、滑动操作。本应用无需注册或登录，仅在设备内运行，本条款规定了本应用的使用条件。</p>",
       label_purpose: "使用目的",
@@ -396,16 +385,15 @@
       ac_terms_change: "<p>本条款可能会根据需要进行修订，修订时将在本页面更新修订日期。修订后继续使用本应用即视为同意修订后的条款。</p>",
       label_law: "适用法律",
       ac_law: "<p>本条款依据大韩民国法律解释。</p>",
-      ac_contact: "联系方式: <em>(请输入联系邮箱地址)</em>",
+      ac_contact: "联系方式: <em>theforestocean@gmail.com</em>",
     },
     es: {
       sidebar_title: "Terms of Service",
       updated_label: "Última actualización<br>Agosto de 2026",
-      back_link: "← Ver los términos de servicio de todas las apps",
       header_title: "Términos de Servicio",
       header_desc: "Esta página administra en un solo lugar los términos de servicio de las apps que publico. Selecciona la app en el menú de la izquierda (o arriba, en móvil).",
       badge_active: "En servicio",
-      ac_meta: "Desarrollador: NatureTeam · Última actualización agosto de 2026",
+      ac_meta: "Desarrollador: theForestOcean Team · Última actualización agosto de 2026",
       label_overview: "Descripción del servicio",
       ac_overview: "<p>Auto Clicker (\"la App\") es una herramienta de asistencia de accesibilidad para Android que realiza toques y deslizamientos automáticos en las posiciones de pantalla que especifiques. Funciona completamente en el dispositivo, sin registro ni inicio de sesión, y estos términos rigen las condiciones de uso de la App.</p>",
       label_purpose: "Finalidad de uso",
@@ -420,16 +408,15 @@
       ac_terms_change: "<p>Estos términos pueden revisarse según sea necesario; cualquier revisión se reflejará en esta página junto con la fecha de actualización. El uso continuado de la App tras una revisión constituye la aceptación de los términos revisados.</p>",
       label_law: "Ley aplicable",
       ac_law: "<p>Estos términos se rigen e interpretan de acuerdo con las leyes de la República de Corea.</p>",
-      ac_contact: "Contacto: <em>(introduce la dirección de correo de contacto)</em>",
+      ac_contact: "Contacto: <em>theforestocean@gmail.com</em>",
     },
     ar: {
       sidebar_title: "Terms of Service",
       updated_label: "آخر تحديث<br>أغسطس 2026",
-      back_link: "← عرض شروط الخدمة لجميع التطبيقات",
       header_title: "شروط الخدمة",
       header_desc: "تدير هذه الصفحة شروط الخدمة للتطبيقات التي أنشرها في مكان واحد. يُرجى اختيار التطبيق من القائمة الموجودة على اليسار (أو في الأعلى على الجوال).",
       badge_active: "قيد الخدمة",
-      ac_meta: "المطوّر: NatureTeam · آخر تحديث أغسطس 2026",
+      ac_meta: "المطوّر: theForestOcean Team · آخر تحديث أغسطس 2026",
       label_overview: "نظرة عامة على الخدمة",
       ac_overview: "<p>يُعد Auto Clicker (\"التطبيق\") أداة مساعدة لإمكانية الوصول على أندرويد تقوم تلقائياً بالنقر والتمرير في المواضع التي تحددها على الشاشة. يعمل بالكامل على الجهاز دون الحاجة إلى تسجيل أو تسجيل دخول، وتحكم هذه الشروط استخدام التطبيق.</p>",
       label_purpose: "الغرض من الاستخدام",
@@ -444,7 +431,7 @@
       ac_terms_change: "<p>قد يتم تعديل هذه الشروط حسب الحاجة؛ وسيتم عكس أي تعديل على هذه الصفحة مع تاريخ التحديث. يُعد استمرار استخدام التطبيق بعد أي تعديل بمثابة قبول للشروط المعدّلة.</p>",
       label_law: "القانون الحاكم",
       ac_law: "<p>تخضع هذه الشروط وتُفسَّر وفقاً لقوانين جمهورية كوريا.</p>",
-      ac_contact: "للتواصل: <em>(أدخل عنوان البريد الإلكتروني للتواصل)</em>",
+      ac_contact: "للتواصل: <em>theforestocean@gmail.com</em>",
     },
   };
 
