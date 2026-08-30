@@ -114,6 +114,15 @@
     letter-spacing: -0.01em;
     margin: 0 0 4px;
   }
+  /* 영문 브랜드명 뒤에 현지 이름을 나란히 보여줄 때 쓴다. */
+  .name-local {
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.78em;
+    margin-inline-start: 8px;
+  }
+  .sidebar nav a .name-local { font-size: 0.9em; margin-inline-start: 5px; }
+
   .app-badge {
     display: inline-block;
     font-size: 11px;
@@ -217,6 +226,7 @@
     <h1 data-i18n="sidebar_title">Privacy Policies</h1>
     <nav id="nav">
       <a href="#auto-clicker">Auto Clicker</a>
+      <a href="#led-cheer" data-i18n="led_name">LED Banner<span class="name-local">LED 응원판</span></a>
       <a href="#app-a-example">[앱 이름 A] (AdMob 예시)</a>
       <a href="#app-b-example">[앱 이름 B] (Firebase 예시)</a>
     </nav>
@@ -319,6 +329,64 @@
       </div>
 
       <div class="note" data-i18n="ac_contact">문의: <em>theforestocean@gmail.com</em></div>
+    </section>
+
+    <!-- ══════════════ LED 응원판 / LED Banner (실제 서비스 중) ══════════════ -->
+    <section class="app-section" id="led-cheer">
+      <h2><span data-i18n="led_name">LED Banner<span class="name-local">LED 응원판</span></span> <span class="app-badge" data-i18n="badge_active">서비스 중</span></h2>
+      <p class="app-meta" data-i18n="led_meta">회원가입 없음 · 광고 없음 · 수집하는 개인정보 없음</p>
+
+      <div class="card">
+        <div class="prop-row">
+          <div class="prop-label" data-i18n="label_collect">수집하는 항목</div>
+          <div class="prop-value" data-i18n="led_collect">
+            <p>본 앱은 개인정보를 <b>일절 수집하지 않습니다.</b> 인터넷 접근 권한이 없어 어떤 데이터도 외부로 전송되지 않으며, 광고·분석·크래시 리포팅 SDK를 포함하지 않습니다.</p>
+          </div>
+        </div>
+        <div class="prop-row">
+          <div class="prop-label" data-i18n="label_purpose">이용 목적</div>
+          <div class="prop-value" data-i18n="led_purpose">
+            <p>수집하는 정보가 없으므로 이용 목적도 없습니다.</p>
+            <p style="margin-top:8px">입력한 문구, 효과·색상·크기 설정, 사용자가 고른 이미지의 사본은 다음 실행 때 같은 화면을 다시 보여주기 위해 기기 내부 저장소에만 보관됩니다.</p>
+          </div>
+        </div>
+        <div class="prop-row">
+          <div class="prop-label" data-i18n="label_retention">보유 기간</div>
+          <div class="prop-value" data-i18n="led_retention"><p>기기 내부 저장소(DataStore)에만 보관되며, 앱을 삭제하면 함께 삭제됩니다. 앱 안에서 &ldquo;이미지 빼기&rdquo;를 누르면 이미지 사본은 즉시 삭제됩니다.</p></div>
+        </div>
+        <div class="prop-row">
+          <div class="prop-label" data-i18n="label_third_party">제3자 제공</div>
+          <div class="prop-value" data-i18n="led_third_party"><p>제3자에게 제공하거나 국외로 이전하는 데이터가 없습니다. 광고 SDK와 분석 도구를 사용하지 않습니다.</p></div>
+        </div>
+        <div class="prop-row">
+          <div class="prop-label" data-i18n="label_permissions">권한</div>
+          <div class="prop-value" data-i18n="led_permissions">
+            <p>런타임 권한을 하나도 요청하지 않습니다.</p>
+            <ul style="margin-top:8px">
+              <li><b>사진·미디어</b> — Android 사진 선택기를 사용합니다. 사용자가 고른 한 장만 앱에 전달되며 사진첩 전체에는 접근하지 않습니다.</li>
+              <li><b>카메라 플래시</b> — <code>setTorchMode</code>로 손전등만 켜고 끕니다. 카메라 권한이 필요 없고 사진·영상을 촬영하거나 저장하지 않습니다.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="prop-row">
+          <div class="prop-label" data-i18n="label_children">아동 대상 여부</div>
+          <div class="prop-value" data-i18n="led_children"><p>개인정보를 수집하지 않으므로 만 14세 미만 아동의 개인정보 또한 수집하지 않습니다.</p></div>
+        </div>
+        <div class="prop-row">
+          <div class="prop-label" data-i18n="label_rights">정보주체의 권리</div>
+          <div class="prop-value" data-i18n="led_rights"><p>수집·보관하는 개인정보가 없어 열람·정정·삭제 대상이 되는 정보가 존재하지 않습니다. 기기에 저장된 문구와 설정은 앱을 삭제하면 모두 지워집니다.</p></div>
+        </div>
+        <div class="prop-row">
+          <div class="prop-label" data-i18n="label_officer">개인정보 보호책임자</div>
+          <div class="prop-value" data-i18n="led_officer"><p>담당: theForestOcean Team<br>이메일: <a href="mailto:theforestocean@gmail.com">theforestocean@gmail.com</a></p></div>
+        </div>
+        <div class="prop-row">
+          <div class="prop-label" data-i18n="label_safety">안전 안내</div>
+          <div class="prop-value" data-i18n="led_safety"><p>화면과 손전등을 최소 0.1초 간격까지 빠르게 깜빡이는 기능이 있습니다. 빛에 민감하거나 광과민성 발작 이력이 있는 경우 사용에 주의해 주세요.</p></div>
+        </div>
+      </div>
+
+      <div class="note" data-i18n="led_contact">문의: <em>theforestocean@gmail.com</em></div>
     </section>
 
     <!-- ══════════════ 템플릿: AdMob 버전 앱 ══════════════ -->
@@ -430,6 +498,20 @@
   // AdMob/Firebase 예시 템플릿 섹션은 실제 서비스 내용이 아니므로 번역 대상에서 제외.
   const translations = {
     ko: {
+      led_name: "LED Banner<span class=\"name-local\">LED 응원판</span>",
+      led_meta: "회원가입 없음 · 광고 없음 · 수집하는 개인정보 없음",
+      label_permissions: "권한",
+      label_safety: "안전 안내",
+      led_collect: "<p>본 앱은 개인정보를 <b>일절 수집하지 않습니다.</b> 인터넷 접근 권한이 없어 어떤 데이터도 외부로 전송되지 않으며, 광고·분석·크래시 리포팅 SDK를 포함하지 않습니다.</p>",
+      led_purpose: "<p>수집하는 정보가 없으므로 이용 목적도 없습니다.</p><p style=\"margin-top:8px\">입력한 문구, 효과·색상·크기 설정, 사용자가 고른 이미지의 사본은 다음 실행 때 같은 화면을 다시 보여주기 위해 기기 내부 저장소에만 보관됩니다.</p>",
+      led_retention: "<p>기기 내부 저장소(DataStore)에만 보관되며, 앱을 삭제하면 함께 삭제됩니다. 앱 안에서 &ldquo;이미지 빼기&rdquo;를 누르면 이미지 사본은 즉시 삭제됩니다.</p>",
+      led_third_party: "<p>제3자에게 제공하거나 국외로 이전하는 데이터가 없습니다. 광고 SDK와 분석 도구를 사용하지 않습니다.</p>",
+      led_permissions: "<p>런타임 권한을 하나도 요청하지 않습니다.</p><ul style=\"margin-top:8px\"><li><b>사진·미디어</b> — Android 사진 선택기를 사용합니다. 사용자가 고른 한 장만 앱에 전달되며 사진첩 전체에는 접근하지 않습니다.</li><li><b>카메라 플래시</b> — <code>setTorchMode</code>로 손전등만 켜고 끕니다. 카메라 권한이 필요 없고 사진·영상을 촬영하거나 저장하지 않습니다.</li></ul>",
+      led_children: "<p>개인정보를 수집하지 않으므로 만 14세 미만 아동의 개인정보 또한 수집하지 않습니다.</p>",
+      led_rights: "<p>수집·보관하는 개인정보가 없어 열람·정정·삭제 대상이 되는 정보가 존재하지 않습니다. 기기에 저장된 문구와 설정은 앱을 삭제하면 모두 지워집니다.</p>",
+      led_officer: "<p>담당: theForestOcean Team<br>이메일: <a href=\"mailto:theforestocean@gmail.com\">theforestocean@gmail.com</a></p>",
+      led_safety: "<p>화면과 손전등을 최소 0.1초 간격까지 빠르게 깜빡이는 기능이 있습니다. 빛에 민감하거나 광과민성 발작 이력이 있는 경우 사용에 주의해 주세요.</p>",
+      led_contact: "문의: <em>theforestocean@gmail.com</em>",
       sidebar_title: "Privacy Policies",
       updated_label: "최종 수정일<br>2026년 7월",
       header_title: "개인정보 처리방침",
@@ -461,6 +543,20 @@
       ac_contact: "문의: <em>theforestocean@gmail.com</em>",
     },
     en: {
+      led_name: "LED Banner",
+      led_meta: "No account · No ads · No personal data collected",
+      label_permissions: "Permissions",
+      label_safety: "Safety notice",
+      led_collect: "<p>This app collects <b>no personal information at all.</b> It has no internet permission, so nothing is sent anywhere, and it contains no advertising, analytics, or crash-reporting SDKs.</p>",
+      led_purpose: "<p>Since nothing is collected, there is no purpose of use.</p><p style=\"margin-top:8px\">The message you type, your effect/color/size settings, and a copy of any image you pick are kept only in the app's private storage on your device, so the same banner is there next time you open it.</p>",
+      led_retention: "<p>Everything stays in the app's private storage (DataStore) on your device and is deleted when you uninstall the app. Tapping &ldquo;Remove image&rdquo; in the app deletes the image copy immediately.</p>",
+      led_third_party: "<p>There is no data shared with third parties or transferred overseas. No ad SDKs and no analytics tools are used.</p>",
+      led_permissions: "<p>The app requests no runtime permissions.</p><ul style=\"margin-top:8px\"><li><b>Photos/media</b> — it uses the Android Photo Picker. Only the single image you choose is handed to the app; it cannot browse your gallery.</li><li><b>Camera flash</b> — it only toggles the flashlight via <code>setTorchMode</code>. No camera permission is needed, and it never captures or stores photos or video.</li></ul>",
+      led_children: "<p>The app collects no personal information from anyone, including children.</p>",
+      led_rights: "<p>Because no personal data is collected or stored, there is nothing to access, correct, or delete. Settings kept on your device are removed when you uninstall the app.</p>",
+      led_officer: "<p>Contact: theForestOcean Team<br>Email: <a href=\"mailto:theforestocean@gmail.com\">theforestocean@gmail.com</a></p>",
+      led_safety: "<p>The app can flash the screen and the flashlight as fast as every 0.1 seconds. Please take care if you are sensitive to light or have a history of photosensitive seizures.</p>",
+      led_contact: "Contact: <em>theforestocean@gmail.com</em>",
       sidebar_title: "Privacy Policies",
       updated_label: "Last updated<br>July 2026",
       header_title: "Privacy Policy",
@@ -492,6 +588,20 @@
       ac_contact: "Contact: <em>theforestocean@gmail.com</em>",
     },
     ja: {
+      led_name: "LED Banner<span class=\"name-local\">LED応援ボード</span>",
+      led_meta: "会員登録なし · 広告なし · 個人情報の収集なし",
+      label_permissions: "権限",
+      label_safety: "安全に関するお知らせ",
+      led_collect: "<p>本アプリは個人情報を<b>一切収集しません。</b>インターネット権限がないため外部に送信されるデータはなく、広告・分析・クラッシュレポートの SDK も含みません。</p>",
+      led_purpose: "<p>収集する情報がないため、利用目的もありません。</p><p style=\"margin-top:8px\">入力した文字、エフェクト・色・大きさの設定、選んだ画像のコピーは、次に開いたときに同じ表示を再現するためだけに端末内部のストレージに保存されます。</p>",
+      led_retention: "<p>端末内部のストレージ（DataStore）にのみ保存され、アプリを削除すると一緒に削除されます。アプリ内で「画像を外す」を押すと画像のコピーは直ちに削除されます。</p>",
+      led_third_party: "<p>第三者に提供したり国外へ移転したりするデータはありません。広告 SDK も分析ツールも使用していません。</p>",
+      led_permissions: "<p>実行時の権限は一切要求しません。</p><ul style=\"margin-top:8px\"><li><b>写真・メディア</b> — Android のフォトピッカーを使用します。選んだ 1 枚だけがアプリに渡され、アルバム全体にはアクセスしません。</li><li><b>カメラのフラッシュ</b> — <code>setTorchMode</code> でライトを点灯・消灯するだけです。カメラ権限は不要で、写真や動画の撮影・保存は行いません。</li></ul>",
+      led_children: "<p>個人情報を収集しないため、児童の個人情報も収集しません。</p>",
+      led_rights: "<p>収集・保管している個人情報がないため、開示・訂正・削除の対象となる情報はありません。端末に保存された設定はアプリを削除すればすべて消えます。</p>",
+      led_officer: "<p>担当: theForestOcean Team<br>メール: <a href=\"mailto:theforestocean@gmail.com\">theforestocean@gmail.com</a></p>",
+      led_safety: "<p>画面とライトを最短 0.1 秒間隔で点滅させる機能があります。光に敏感な方や光過敏性発作の既往がある方はご注意ください。</p>",
+      led_contact: "お問い合わせ: <em>theforestocean@gmail.com</em>",
       sidebar_title: "Privacy Policies",
       updated_label: "最終更新日<br>2026年7月",
       header_title: "プライバシーポリシー",
@@ -523,6 +633,20 @@
       ac_contact: "お問い合わせ: <em>theforestocean@gmail.com</em>",
     },
     zh: {
+      led_name: "LED Banner<span class=\"name-local\">LED 应援板</span>",
+      led_meta: "无需注册 · 无广告 · 不收集个人信息",
+      label_permissions: "权限",
+      label_safety: "安全提示",
+      led_collect: "<p>本应用<b>完全不收集任何个人信息。</b>没有联网权限，不会向外部发送任何数据，也不包含广告、分析或崩溃报告 SDK。</p>",
+      led_purpose: "<p>由于不收集任何信息，因此也不存在使用目的。</p><p style=\"margin-top:8px\">您输入的文字、效果·颜色·大小设置，以及所选图片的副本，仅保存在设备内部存储中，用于下次打开时还原同样的画面。</p>",
+      led_retention: "<p>仅保存在设备内部存储（DataStore）中，卸载应用即一并删除。在应用内点击“移除图片”会立即删除图片副本。</p>",
+      led_third_party: "<p>没有向第三方提供或向境外转移的数据。不使用广告 SDK 和分析工具。</p>",
+      led_permissions: "<p>不请求任何运行时权限。</p><ul style=\"margin-top:8px\"><li><b>照片·媒体</b> — 使用 Android 照片选择器。只有您选择的那一张会交给应用，应用无法浏览整个相册。</li><li><b>相机闪光灯</b> — 仅通过 <code>setTorchMode</code> 开关手电筒。无需相机权限，不拍摄也不保存照片或视频。</li></ul>",
+      led_children: "<p>本应用不收集任何人的个人信息，儿童亦然。</p>",
+      led_rights: "<p>由于不收集或保存个人信息，不存在可供查阅、更正或删除的信息。设备上保存的设置会在卸载应用时全部清除。</p>",
+      led_officer: "<p>负责人: theForestOcean Team<br>邮箱: <a href=\"mailto:theforestocean@gmail.com\">theforestocean@gmail.com</a></p>",
+      led_safety: "<p>本应用可让屏幕和手电筒以最快 0.1 秒的间隔闪烁。如果您对光线敏感或有光敏性癫痫病史，请谨慎使用。</p>",
+      led_contact: "联系方式: <em>theforestocean@gmail.com</em>",
       sidebar_title: "Privacy Policies",
       updated_label: "最后更新日期<br>2026年7月",
       header_title: "隐私政策",
@@ -554,6 +678,20 @@
       ac_contact: "联系方式: <em>theforestocean@gmail.com</em>",
     },
     es: {
+      led_name: "LED Banner<span class=\"name-local\">Pancarta LED</span>",
+      led_meta: "Sin registro · Sin anuncios · No recopila datos personales",
+      label_permissions: "Permisos",
+      label_safety: "Aviso de seguridad",
+      led_collect: "<p>Esta app <b>no recopila ninguna información personal.</b> No tiene permiso de internet, por lo que no envía datos a ningún sitio, y no incluye SDK de publicidad, analítica ni informes de fallos.</p>",
+      led_purpose: "<p>Como no se recopila nada, no existe finalidad de uso.</p><p style=\"margin-top:8px\">El mensaje que escribes, los ajustes de efecto, color y tamaño, y una copia de la imagen que elijas se guardan únicamente en el almacenamiento privado de tu dispositivo para mostrarte la misma pancarta la próxima vez.</p>",
+      led_retention: "<p>Todo permanece en el almacenamiento privado del dispositivo (DataStore) y se elimina al desinstalar la app. Al pulsar &ldquo;Quitar imagen&rdquo; la copia se borra de inmediato.</p>",
+      led_third_party: "<p>No hay datos compartidos con terceros ni transferidos al extranjero. No se usan SDK de anuncios ni herramientas de analítica.</p>",
+      led_permissions: "<p>La app no solicita ningún permiso en tiempo de ejecución.</p><ul style=\"margin-top:8px\"><li><b>Fotos y multimedia</b> — usa el selector de fotos de Android. Solo la imagen que elijas se entrega a la app; no puede explorar tu galería.</li><li><b>Flash de la cámara</b> — solo enciende y apaga la linterna con <code>setTorchMode</code>. No necesita permiso de cámara y nunca captura ni guarda fotos o vídeo.</li></ul>",
+      led_children: "<p>La app no recopila información personal de nadie, tampoco de menores.</p>",
+      led_rights: "<p>Como no se recopilan ni almacenan datos personales, no hay nada que consultar, corregir o eliminar. Los ajustes guardados en el dispositivo se borran al desinstalar la app.</p>",
+      led_officer: "<p>Contacto: theForestOcean Team<br>Correo: <a href=\"mailto:theforestocean@gmail.com\">theforestocean@gmail.com</a></p>",
+      led_safety: "<p>La app puede hacer parpadear la pantalla y la linterna hasta cada 0,1 segundos. Ten cuidado si eres sensible a la luz o tienes antecedentes de crisis fotosensibles.</p>",
+      led_contact: "Contacto: <em>theforestocean@gmail.com</em>",
       sidebar_title: "Privacy Policies",
       updated_label: "Última actualización<br>Julio de 2026",
       header_title: "Política de Privacidad",
@@ -585,6 +723,20 @@
       ac_contact: "Contacto: <em>theforestocean@gmail.com</em>",
     },
     ar: {
+      led_name: "LED Banner<span class=\"name-local\">لافتة LED</span>",
+      led_meta: "بدون تسجيل · بدون إعلانات · لا يجمع أي بيانات شخصية",
+      label_permissions: "الأذونات",
+      label_safety: "تنبيه للسلامة",
+      led_collect: "<p>هذا التطبيق <b>لا يجمع أي معلومات شخصية إطلاقًا.</b> لا يملك إذن الإنترنت، لذلك لا تُرسل أي بيانات إلى أي جهة، ولا يتضمن حزم إعلانات أو تحليلات أو تقارير أعطال.</p>",
+      led_purpose: "<p>لا توجد بيانات مجمّعة، وبالتالي لا يوجد غرض للاستخدام.</p><p style=\"margin-top:8px\">النص الذي تكتبه وإعدادات التأثير واللون والحجم ونسخة من الصورة التي تختارها تُحفظ فقط في التخزين الخاص بالتطبيق على جهازك، لعرض اللافتة نفسها في المرة القادمة.</p>",
+      led_retention: "<p>كل ذلك يبقى في التخزين الخاص بالتطبيق (DataStore) ويُحذف عند إزالة التطبيق. والضغط على &ldquo;إزالة الصورة&rdquo; داخل التطبيق يحذف نسخة الصورة فورًا.</p>",
+      led_third_party: "<p>لا توجد بيانات تُشارك مع أطراف ثالثة أو تُنقل خارج البلاد. ولا تُستخدم أي حزم إعلانات أو أدوات تحليل.</p>",
+      led_permissions: "<p>لا يطلب التطبيق أي أذونات أثناء التشغيل.</p><ul style=\"margin-top:8px\"><li><b>الصور والوسائط</b> — يستخدم مُنتقي الصور في أندرويد. تُسلَّم للتطبيق الصورة التي تختارها فقط، ولا يمكنه تصفح معرض الصور.</li><li><b>ضوء الكاميرا</b> — يشغّل الكشاف ويطفئه عبر <code>setTorchMode</code> فقط. لا يحتاج إذن الكاميرا ولا يلتقط صورًا أو مقاطع فيديو ولا يحفظها.</li></ul>",
+      led_children: "<p>لا يجمع التطبيق معلومات شخصية من أي شخص، بما في ذلك الأطفال.</p>",
+      led_rights: "<p>بما أنه لا تُجمع أو تُخزَّن بيانات شخصية، فلا توجد معلومات يمكن الاطلاع عليها أو تصحيحها أو حذفها. وتُمحى الإعدادات المحفوظة على الجهاز عند إزالة التطبيق.</p>",
+      led_officer: "<p>المسؤول: theForestOcean Team<br>البريد: <a href=\"mailto:theforestocean@gmail.com\">theforestocean@gmail.com</a></p>",
+      led_safety: "<p>يمكن للتطبيق أن يومض الشاشة والكشاف بفاصل يصل إلى 0.1 ثانية. يُرجى الانتباه إذا كنت حسّاسًا للضوء أو لديك تاريخ من النوبات الناتجة عن الحساسية للضوء.</p>",
+      led_contact: "للتواصل: <em>theforestocean@gmail.com</em>",
       sidebar_title: "Privacy Policies",
       updated_label: "آخر تحديث<br>يوليو 2026",
       header_title: "سياسة الخصوصية",
