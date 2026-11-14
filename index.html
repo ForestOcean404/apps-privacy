@@ -268,7 +268,7 @@
         </div>
         <div class="prop-row">
           <div class="prop-label" data-i18n="label_retention">보유 기간</div>
-          <div class="prop-value" data-i18n="ac_retention"><p>광고 식별자 등은 Google의 개인정보처리방침에 따라 보관되며, 앱 자체는 별도로 광고 데이터를 저장하지 않습니다. 사용자의 스크립트·설정은 기기 로컬 저장소(SharedPreferences)에만 보관되며, 앱을 삭제하면 함께 삭제됩니다.</p></div>
+          <div class="prop-value" data-i18n="ac_retention"><p>광고 식별자 등은 Google의 개인정보처리방침에 따라 보관되며, 앱 자체는 별도로 광고 데이터를 저장하지 않습니다. 사용자의 스크립트·설정은 기기 로컬 저장소(SharedPreferences)에만 보관되며, 앱을 삭제하면 함께 삭제됩니다.</p><p>첫 실행에서 생년월일을 확인합니다. 13세 미만의 날짜는 저장하지 않으며 앱 이용을 진행하지 않습니다. 이용 가능한 사용자의 생년월일은 이 기기에만 저장하고 자동 백업에서 제외하며, 앱 삭제 시 함께 삭제됩니다. 생년월일 원본은 개발자나 Google AdMob에 보내지 않고, 광고에는 연령 보호 신호만 전달합니다.</p></div>
         </div>
         <div class="prop-row">
           <div class="prop-label" data-i18n="label_third_party">제3자 제공</div>
@@ -502,7 +502,7 @@
       label_purpose: "이용 목적",
       ac_purpose: "<p>광고 SDK가 수집하는 정보는 맞춤형 또는 일반 광고 게재, 광고 성과 측정 및 부정 클릭 방지 목적으로 사용됩니다.</p><p style=\"margin-top:8px\">사용자가 만든 스크립트(클릭 좌표, 반복 설정 등)는 광고와 무관하게 기기 내부에만 저장되며 외부로 전송되지 않습니다.</p>",
       label_retention: "보유 기간",
-      ac_retention: "<p>광고 식별자 등은 Google의 개인정보처리방침에 따라 보관되며, 앱 자체는 별도로 광고 데이터를 저장하지 않습니다. 사용자의 스크립트·설정은 기기 로컬 저장소(SharedPreferences)에만 보관되며, 앱을 삭제하면 함께 삭제됩니다.</p>",
+      ac_retention: "<p>광고 식별자 등은 Google의 개인정보처리방침에 따라 보관되며, 앱 자체는 별도로 광고 데이터를 저장하지 않습니다. 사용자의 스크립트·설정은 기기 로컬 저장소(SharedPreferences)에만 보관되며, 앱을 삭제하면 함께 삭제됩니다.</p><p>첫 실행에서 생년월일을 확인합니다. 13세 미만의 날짜는 저장하지 않으며 앱 이용을 진행하지 않습니다. 이용 가능한 사용자의 생년월일은 이 기기에만 저장하고 자동 백업에서 제외하며, 앱 삭제 시 함께 삭제됩니다. 생년월일 원본은 개발자나 Google AdMob에 보내지 않고, 광고에는 연령 보호 신호만 전달합니다.</p>",
       label_third_party: "제3자 제공",
       ac_third_party: "<p>광고 관련 IP 주소, 상호작용, 진단 정보 및 기기·계정 식별자가 Google LLC(AdMob)와 동의 화면에 표시되는 광고 기술 제공업체에 전달될 수 있습니다. 자세한 내용은 <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Google 개인정보처리방침</a>과 앱의 지역별 동의 화면을 확인해 주세요.</p>",
       label_overseas: "개인정보의 국외 이전",
@@ -547,7 +547,7 @@
       label_purpose: "Purpose of Use",
       ac_purpose: "<p>Data collected by the ad SDK is used to serve personalized or general ads, measure ad performance, and prevent invalid clicks.</p><p style=\"margin-top:8px\">Scripts you create (tap coordinates, repeat settings, etc.) are unrelated to ads and are stored only on your device, never transmitted externally.</p>",
       label_retention: "Retention Period",
-      ac_retention: "<p>Advertising IDs and related data are retained according to Google's Privacy Policy; the app itself does not separately store ad data. Your scripts and settings are stored only in local device storage (SharedPreferences) and are deleted when the app is uninstalled.</p>",
+      ac_retention: "<p>Advertising IDs and related data are retained according to Google's Privacy Policy; the app itself does not separately store ad data. Your scripts and settings are stored only in local device storage (SharedPreferences) and are deleted when the app is uninstalled.</p><p>On first launch, the app checks your birth date. Dates for users under 13 are not stored and they cannot continue into the app. For eligible users, the birth date stays only on the device, is excluded from backup, and is deleted when the app is uninstalled. The birth date itself is not sent to the developer or Google AdMob; only an age-protection signal is sent with ad requests.</p>",
       label_third_party: "Third-Party Sharing",
       ac_third_party: "<p>Ad-related IP address, interactions, diagnostics, and device/account identifiers may be shared with Google LLC (AdMob) and the ad technology providers disclosed in the regional consent message. See the <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Google Privacy Policy</a> and the message shown in the app for details.</p>",
       label_overseas: "Overseas Transfer of Personal Information",
@@ -592,7 +592,7 @@
       label_purpose: "利用目的",
       ac_purpose: "<p>広告SDKが収集する情報は、パーソナライズ広告または一般広告の配信、広告効果の測定、不正クリックの防止を目的として使用されます。</p><p style=\"margin-top:8px\">ユーザーが作成したスクリプト（タップ座標、繰り返し設定など）は広告とは無関係に端末内にのみ保存され、外部に送信されません。</p>",
       label_retention: "保有期間",
-      ac_retention: "<p>広告識別子等はGoogleのプライバシーポリシーに従って保管され、アプリ自体は広告データを別途保存しません。ユーザーのスクリプト・設定は端末ローカルストレージ（SharedPreferences）にのみ保存され、アプリを削除すると同時に削除されます。</p>",
+      ac_retention: "<p>広告識別子等はGoogleのプライバシーポリシーに従って保管され、アプリ自体は広告データを別途保存しません。ユーザーのスクリプト・設定は端末ローカルストレージ（SharedPreferences）にのみ保存され、アプリを削除すると同時に削除されます。</p><p>初回起動時に生年月日を確認します。13歳未満の生年月日は保存せず、アプリの利用に進めません。利用対象者の生年月日は端末内にのみ保存され、バックアップ対象外で、アプリの削除時に消去されます。生年月日そのものは開発者やGoogle AdMobに送信せず、広告リクエストには年齢保護の信号のみを送ります。</p>",
       label_third_party: "第三者提供",
       ac_third_party: "<p>広告関連のIPアドレス、操作情報、診断情報、端末・アカウント識別子は、Google LLC（AdMob）および地域別同意画面に表示される広告技術提供者と共有される場合があります。詳細は<a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Googleのプライバシーポリシー</a>とアプリ内の同意画面をご確認ください。</p>",
       label_overseas: "個人情報の海外移転",
@@ -637,7 +637,7 @@
       label_purpose: "使用目的",
       ac_purpose: "<p>广告SDK收集的信息用于投放个性化或通用广告、衡量广告效果以及防止无效点击。</p><p style=\"margin-top:8px\">用户创建的脚本（点击坐标、重复设置等）与广告无关，仅保存在设备内部，不会传输到外部。</p>",
       label_retention: "保留期限",
-      ac_retention: "<p>广告标识符等信息将按照 Google 的隐私政策予以保留，应用本身不会单独存储广告数据。用户的脚本与设置仅保存在设备本地存储（SharedPreferences）中，卸载应用后即被删除。</p>",
+      ac_retention: "<p>广告标识符等信息将按照 Google 的隐私政策予以保留，应用本身不会单独存储广告数据。用户的脚本与设置仅保存在设备本地存储（SharedPreferences）中，卸载应用后即被删除。</p><p>首次启动时，应用会核验出生日期。13 岁以下用户的日期不会被保存，也无法继续使用应用。符合使用年龄的用户，其出生日期仅存于设备、不参与备份，并在卸载应用时删除。出生日期本身不会发送给开发者或 Google AdMob；广告请求只会传递年龄保护信号。</p>",
       label_third_party: "第三方提供",
       ac_third_party: "<p>广告相关的 IP 地址、交互与诊断信息、设备/账户标识符可能会与 Google LLC（AdMob）以及地区同意页面披露的广告技术提供商共享。详情请参阅 <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Google 隐私政策</a>和应用内显示的同意页面。</p>",
       label_overseas: "个人信息的境外传输",
@@ -682,7 +682,7 @@
       label_purpose: "Finalidad de uso",
       ac_purpose: "<p>La información recopilada por el SDK de anuncios se usa para mostrar anuncios personalizados o generales, medir su rendimiento y prevenir clics fraudulentos.</p><p style=\"margin-top:8px\">Los scripts que creas (coordenadas de toque, ajustes de repetición, etc.) no están relacionados con los anuncios y se guardan solo en tu dispositivo, nunca se transmiten externamente.</p>",
       label_retention: "Período de retención",
-      ac_retention: "<p>El identificador de publicidad y datos relacionados se conservan según la Política de Privacidad de Google; la app en sí no almacena datos de anuncios por separado. Tus scripts y ajustes se guardan solo en el almacenamiento local del dispositivo (SharedPreferences) y se eliminan al desinstalar la app.</p>",
+      ac_retention: "<p>El identificador de publicidad y datos relacionados se conservan según la Política de Privacidad de Google; la app en sí no almacena datos de anuncios por separado. Tus scripts y ajustes se guardan solo en el almacenamiento local del dispositivo (SharedPreferences) y se eliminan al desinstalar la app.</p><p>En el primer inicio, la app comprueba tu fecha de nacimiento. No guarda la fecha de menores de 13 años ni permite continuar en la app. Para los usuarios que pueden utilizarla, la fecha queda solo en el dispositivo, se excluye de las copias de seguridad y se elimina al desinstalar la app. La fecha en sí no se envía al desarrollador ni a Google AdMob; las solicitudes de anuncios solo incluyen una señal de protección por edad.</p>",
       label_third_party: "Compartición con terceros",
       ac_third_party: "<p>La dirección IP, las interacciones, los diagnósticos y los identificadores relacionados con anuncios pueden compartirse con Google LLC (AdMob) y los proveedores de tecnología publicitaria indicados en el mensaje de consentimiento regional. Consulta la <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">Política de Privacidad de Google</a> y el mensaje de la app para obtener detalles.</p>",
       label_overseas: "Transferencia internacional de datos personales",
@@ -727,7 +727,7 @@
       label_purpose: "الغرض من الاستخدام",
       ac_purpose: "<p>تُستخدم المعلومات التي تجمعها حزمة الإعلانات لعرض إعلانات مخصصة أو عامة، وقياس أداء الإعلانات، ومنع النقرات الاحتيالية.</p><p style=\"margin-top:8px\">النصوص البرمجية التي ينشئها المستخدم (إحداثيات النقر، إعدادات التكرار، إلخ) لا علاقة لها بالإعلانات وتُحفظ على الجهاز فقط ولا يتم إرسالها خارجياً.</p>",
       label_retention: "مدة الاحتفاظ بالبيانات",
-      ac_retention: "<p>يتم الاحتفاظ بمعرّف الإعلان وما شابهه وفقاً لسياسة خصوصية Google، ولا يقوم التطبيق نفسه بتخزين بيانات الإعلانات بشكل منفصل. يتم حفظ النصوص البرمجية وإعدادات المستخدم محلياً على الجهاز فقط (SharedPreferences) ويتم حذفها عند إلغاء تثبيت التطبيق.</p>",
+      ac_retention: "<p>يتم الاحتفاظ بمعرّف الإعلان وما شابهه وفقاً لسياسة خصوصية Google، ولا يقوم التطبيق نفسه بتخزين بيانات الإعلانات بشكل منفصل. يتم حفظ النصوص البرمجية وإعدادات المستخدم محلياً على الجهاز فقط (SharedPreferences) ويتم حذفها عند إلغاء تثبيت التطبيق.</p><p>عند التشغيل الأول، يتحقق التطبيق من تاريخ الميلاد. لا يحتفظ بتاريخ ميلاد من هم دون 13 عامًا ولا يسمح لهم بمتابعة استخدام التطبيق. أما المستخدمون المؤهلون، فيُحفظ تاريخ ميلادهم على الجهاز فقط، ويُستثنى من النسخ الاحتياطي، ويُحذف عند إزالة التطبيق. لا يُرسل تاريخ الميلاد نفسه إلى المطوّر أو Google AdMob؛ بل تُرسل إشارة حماية العمر فقط مع طلبات الإعلانات.</p>",
       label_third_party: "المشاركة مع أطراف ثالثة",
       ac_third_party: "<p>قد تتم مشاركة عنوان IP والتفاعلات وبيانات التشخيص والمعرّفات المرتبطة بالإعلانات مع Google LLC ‏(AdMob) ومزوّدي تقنية الإعلان المذكورين في رسالة الموافقة الإقليمية. راجع <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">سياسة خصوصية Google</a> والرسالة المعروضة داخل التطبيق للتفاصيل.</p>",
       label_overseas: "نقل البيانات الشخصية إلى خارج البلاد",
